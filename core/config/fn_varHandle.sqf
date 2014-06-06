@@ -68,6 +68,8 @@ switch (_mode) do
             case "vodka": {"life_inv_vodka"};
             case "grapes": {"life_inv_grapes"};
 			case "ziptie": {"life_inv_ziptie"};
+			case "autoToolKit": {"life_inv_autoTool"};
+			case "knife": {"life_inv_knife"};
 		};
 	};
 	
@@ -127,6 +129,8 @@ switch (_mode) do
             case "life_inv_vodka": {"vodka"};
             case "life_inv_grapes": {"grapes"};
 			case "life_inv_ziptie": {"ziptie"};
+			case "life_inv_autoTool": {"autoToolKit"};
+			case "life_inv_knife": {"knife"};
 		};
 	};
 };
