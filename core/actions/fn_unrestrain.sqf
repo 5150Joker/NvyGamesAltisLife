@@ -7,7 +7,6 @@ if(isNull _unit OR !(_unit getVariable["restrained",FALSE])) exitWith {}; //Erro
 
 if (side player != west) then
 {
-	systemChat "unrestrain civilian check passed";
 	if(life_inv_knife < 1) exitWith {hint"You need a pocket knife to break restraints!"};
 		life_inv_knife = life_inv_knife - 1;
 		hint "The pocket knife snapped, but the restraints were broken!";

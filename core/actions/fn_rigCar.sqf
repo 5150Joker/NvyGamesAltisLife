@@ -15,13 +15,12 @@ if(_locked == 0 && _vehicle != bombTarget) then
 	sleep 10;
 	life_action_inUse = false;
 	bombTarget = _vehicle;
-	detAction = player addAction["Detonate Car",life_fnc_carBomb,"",0,false,false,"",
+	detAction = player addAction["Detonate Vehicle",life_fnc_carBomb,"",0,false,false,"",
 		'alive player && !life_istazed && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")'];
 
 
 	while {alive _vehicle} do
 	{
-		systemChat "Beeping";
 		[[_vehicle, "beep",20],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;		
 		sleep 3.4;
 	};

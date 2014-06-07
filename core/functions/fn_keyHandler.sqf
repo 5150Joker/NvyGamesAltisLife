@@ -55,12 +55,10 @@ switch (_code) do
 		if(_shift) then {_handled = true;};
 		if (cursorTarget getVariable "restrained") then
 		{
-			systemChat "Keyhandler unrestrained if passed";
 			[cursorTarget] call life_fnc_unrestrain
 		};
 		if(_shift && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
-			systemChat "Keyhandler restrained if passed";
 			[cursorTarget] call life_fnc_restrainAction;
 		};
 	};
