@@ -5,7 +5,7 @@
 private["_vehicle","_locked"];
 _vehicle = cursorTarget;
 _locked = locked _vehicle;
-if(_locked == 0) then
+if(_locked == 0 && _vehicle != bombTarget) then
 {
 	life_action_inUse = true;
 	hint "re-wiring engine...";
@@ -21,6 +21,7 @@ if(_locked == 0) then
 
 	while {alive _vehicle} do
 	{
+		systemChat "Beeping";
 		[[_vehicle, "beep",20],"life_fnc_playSound",true,false] spawn BIS_fnc_MP;		
 		sleep 3.4;
 	};

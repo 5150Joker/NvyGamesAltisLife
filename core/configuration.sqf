@@ -78,6 +78,7 @@ life_impound_boat = 350;
 life_impound_air = 1050;
 life_istazed = false;
 life_my_gang = ObjNull;
+bombTarget = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
@@ -152,7 +153,7 @@ life_inv_items =
     "life_inv_grapes",
 	"life_inv_ziptie",
 	"life_inv_autoTool",
-	"life_inv_knife
+	"life_inv_knife"
 ];
 
 //Setup variable inv vars.

@@ -59,8 +59,6 @@ if(playerSide == west) then {
 	_Btn5 ctrlShow False;
 	//Carbomb
 	_Btn6 ctrlSetText localize "STR_vInAct_Rigcar";
-	_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_rigCar;";
-	if(life_inv_autoTool > 1) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false;};
+	_Btn6 buttonSetAction "[] spawn life_fnc_rigCar;";
+	if(life_inv_autoTool < 1) then {_Btn6 ctrlEnable false;};
 };
-
-
