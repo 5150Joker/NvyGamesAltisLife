@@ -99,6 +99,18 @@ class CfgSounds
     sound[] = {"\sounds\bank.ogg", 1.0, 1};
     titles[] = {};
     };
+  class beep
+    {
+	name = "beep";
+	sound[] = {"\sounds\beep.ogg", 1.0, 1};
+	titles[] = {};
+    };
+  class dial
+    {
+	name = "dial";
+	sound[] = {"\sounds\dial.ogg", 1.0, 1};
+	titles[] = {};
+    };
 };
 
 class CfgDebriefing

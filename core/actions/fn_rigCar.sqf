@@ -5,7 +5,7 @@
 private["_vehicle","_locked"];
 _vehicle = cursorTarget;
 _locked = locked _vehicle;
-if(_locked == 0) then
+if(_locked == 0 && _vehicle != bombTarget) then
 {
 	life_action_inUse = true;
 	hint "re-wiring engine...";
@@ -15,7 +15,7 @@ if(_locked == 0) then
 	sleep 10;
 	life_action_inUse = false;
 	bombTarget = _vehicle;
-	detAction = player addAction["Detonate Car",life_fnc_carBomb,"",0,false,false,"",
+	detAction = player addAction["Detonate Vehicle",life_fnc_carBomb,"",0,false,false,"",
 		'alive player && !life_istazed && !(player getVariable "restrained") && !(player getVariable "Escorting") && !(player getVariable "transporting")'];
 
 

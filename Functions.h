@@ -174,6 +174,7 @@ class Life_Client_Core
         class vehicleGarage {};
 		class handleFlashbang {};
 		class holsterHandgun {};
+		class playSound {};
 	};
 	
 	class Network
