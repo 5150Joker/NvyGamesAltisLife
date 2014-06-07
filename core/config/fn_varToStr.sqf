@@ -64,6 +64,8 @@ switch (_var) do
     case "life_inv_vodka": {"Vodka"};
     case "life_inv_grapes": {"Grapes"};
 	case "life_inv_ziptie": {"ziptie"};
+	case "life_inv_autoTool": {"Auto Tool Kit"};
+	case "life_inv_knife": {"Pocket Knife"};
 	
 	//License Block
 	case "license_civ_driver": {"Driver License"};

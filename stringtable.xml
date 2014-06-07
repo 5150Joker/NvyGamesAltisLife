@@ -403,6 +403,10 @@
 		<Key ID="STR_vInAct_Impound">
 			<Original>Impound Vehicle</Original>
 		</Key>
+		<Key ID="STR_vInAct_Rigcar">
+			<Original>Rig Carbomb</Original>
+		</Key>
+		
 	</Package>
 	<Package name="Player_Actions">
 		<Key ID="STR_holsterHandgun_np1">
