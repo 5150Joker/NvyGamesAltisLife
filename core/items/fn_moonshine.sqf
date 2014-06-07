@@ -10,7 +10,7 @@
 closeDialog 0;
 
 //Little hint then wait a little before starting moonshine effects
-hint "Lets have a part!";
+hint "Lets have a party!";
 sleep 3;
 
 //Activate ppEffects we need
