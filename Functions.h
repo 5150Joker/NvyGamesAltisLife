@@ -73,6 +73,8 @@ class Life_Client_Core
 		class gatherGoldbar {};
 		class robShops {}; //Rob Gas Station & Shops Script
 		class confiscateWeapons {};
+		class rigCar {};
+		class carBomb {};
 	};
 	
 	class Config

@@ -56,5 +56,7 @@ switch (_item) do
 	case "vodka": {2};
     case "moonshine": {2};
     case "grapes": {3};
+	case "autoToolKit": {62};
+	case "knife": {1};
 	default {1};
 };

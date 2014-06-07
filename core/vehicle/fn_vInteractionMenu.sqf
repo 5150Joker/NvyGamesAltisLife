@@ -10,8 +10,9 @@
 #define Btn3 37452
 #define Btn4 37453
 #define Btn5 37454
+#define Btn6 37455
 #define Title 37401
-private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5"];
+private["_display","_curTarget","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6"];
 if(!dialog) then {
 	createDialog "vInteraction_Menu";
 };
@@ -26,15 +27,18 @@ _Btn2 = _display displayCtrl Btn2;
 _Btn3 = _display displayCtrl Btn3;
 _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
+_Btn6 = _display displayCtrl Btn6;
 life_vInact_curTarget = _curTarget;
 
 //Set Repair Action
 _Btn1 ctrlSetText localize "STR_vInAct_Repair";
 _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
-
 if("ToolKit" in (items player)) then {_Btn1 ctrlEnable true;} else {_Btn1 ctrlEnable false;};
 
+
+
 if(playerSide == west) then {
+	_Btn6 ctrlShow False;
 	_Btn2 ctrlSetText localize "STR_vInAct_Registration";
 	_Btn2 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_searchVehAction;";
 	
@@ -47,9 +51,16 @@ if(playerSide == west) then {
 	
 	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	
 } else {
 	_Btn2 ctrlShow false;
 	_Btn3 ctrlShow false;
 	_Btn4 ctrlShow false;
 	_Btn5 ctrlShow False;
+	//Carbomb
+	_Btn6 ctrlSetText localize "STR_vInAct_Rigcar";
+	_Btn6 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_rigCar;";
+	if(life_inv_autoTool > 1) then {_Btn6 ctrlEnable true;} else {_Btn6 ctrlEnable false;};
 };
+
+
