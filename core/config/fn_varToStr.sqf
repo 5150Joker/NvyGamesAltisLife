@@ -63,7 +63,7 @@ switch (_var) do
 	case "life_inv_moonshine": {"Moon Shine"};
     case "life_inv_vodka": {"Vodka"};
     case "life_inv_grapes": {"Grapes"};
-	case "life_inv_ziptie": {"ziptie"};
+	case "life_inv_ziptie": {"Ziptie"};
 	case "life_inv_autoTool": {"Auto Tool Kit"};
 	case "life_inv_knife": {"Pocket Knife"};
 	
