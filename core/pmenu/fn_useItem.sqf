@@ -69,7 +69,7 @@ switch (true) do
     };
     };
 	
-	case (_item == "moonshine"):
+	case (_item == "moonshine" || _item == "vodka"):
     {
     if(([false,_item,1] call life_fnc_handleInv)) then
     {
