@@ -14,7 +14,7 @@ titleText["Dam just a second I need to shave your ass!","PLAIN"];
 Sleep 5;
 titleText["Opps, I think I stuck the needle in the wrong spot..","PLAIN"];
 sleep 5;
-if(player distance (_this select 0) > 5) exitWith {titleText["You need to be within 5m while the doctor is healing you.","PLAIN"]};
+if(player distance (_this select 0) > 5) exitWith {titleText["You need to be within 5m while the doctor is feeling you... Err, healing you.","PLAIN"]};
 titleText["You are now fully healed!","PLAIN"];
 player setdamage 0;
 life_cash = life_cash - 50;
