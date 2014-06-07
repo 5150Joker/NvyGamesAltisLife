@@ -4,15 +4,15 @@ Author: MrKraken
 Made from MrKrakens bare-bones shop robbing tutorial on www.altisliferpg.com forums
 Description:
 Executes the rob shob action!
-Modified by: KrisSerbia
+Modified by: KrisSerbia C
 
 */
 private["_robber","_shop","_timer","_funds","_dist","_success"]; //Kraken Clean-up: added _dist and _success
 _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has the action attached to it is _this. ,0, is the index of object, ObjNull is the default should there be nothing in the parameter or it's broken
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 _action = [_this,2] call BIS_fnc_param;//Action name
-_timer = 60;//Time for the robbery to be completed
-_funds = 5000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
+_timer = 300;//Time for the robbery to be completed
+_funds = 10000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
 _dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
 _success = false; //Kraken Clean-up: set _success to false at the start of the script!
 
@@ -23,7 +23,7 @@ _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
 while {true} do{ //Kraken Clean-Up: changed to while true do:
 
-		hintsilent format ["%1 seconds remaining.Stay within 3 meters of a shop owner!",_timer];
+		hintsilent format ["%1 seconds remaining.Stay within 10 meters of a shop owner!",_timer];
 		sleep 1;
 		_timer = _timer - 1;
 		_dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
@@ -34,7 +34,7 @@ while {true} do{ //Kraken Clean-Up: changed to while true do:
 				_shop switchMove "";
 				_action = _shop addAction["Rob the Gas Station",life_fnc_robShops];
 			};
-			if (_dist >= 4) exitwith {//Test if robber didn't stay within 3 meters of a shop owner
+			if (_dist >= 11) exitwith {//Test if robber didn't stay within 10 meters of a shop owner
 			hint "Robbery failed, You moved too far away";
 			_shop switchMove "";
 			_action = _shop addAction["Rob the Gas Station",life_fnc_robShops];
