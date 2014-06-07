@@ -4,7 +4,7 @@ Author: MrKraken
 Made from MrKrakens bare-bones shop robbing tutorial on www.altisliferpg.com forums
 Description:
 Executes the rob shob action!
-Modified by: KrisSerbia C
+Modified by: KrisSerbia and clock
 
 */
 private["_robber","_shop","_timer","_funds","_dist","_success"]; //Kraken Clean-up: added _dist and _success
@@ -17,7 +17,7 @@ _dist = _robber distance _shop;//Distance beetwen the robber and the shop owner
 _success = false; //Kraken Clean-up: set _success to false at the start of the script!
 
 if(vehicle player != _robber) exitWith { hint "You need to exit your vehicle!"; }; //If the player is in a vehicle, kill the script execution with a message to the player | Kraken CLeanup - Moved to above the other conditions 
-if (alive _robber && {currentWeapon _robber != ""} && {_funds > 0}) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
+if (alive _robber && {currentWeapon _robber != ""} && {side _robber != west} && {_funds > 0}) then {//Conditions met, open if | Kraken Cleanup - as Kris added the vehicle condition, it doesn't need to be in here!
 hint format ["Robbing the gas station!Please Wait %1 sec.",_timer];
 _shop switchMove "AmovPercMstpSsurWnonDnon";//Making a shop owner surrender
 _shop removeAction _action;//Deleting the action,so it won't be spammed
