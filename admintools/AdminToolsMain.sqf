@@ -3,7 +3,7 @@ _pathtovehicles = "admintools\vehicles\";
 _EXECscript1 = 'player execVM "'+_pathtotools+'%1"';
 _EXECscript2 = 'player execVM "'+_pathtovehicles+'%1"';
 //customise these menus to fit your server
-if ((getPlayerUID player) in ["76561198087662716","76561198101711327","76561197977326912","76561198041863191","76561197965521986","76561198102097569"]) then { //all admins
+if ((getPlayerUID player) in ["76561198033377818","76561198087662716","76561198041863191"]) then { //all admins
 	if ((getPlayerUID player) in [""]) then { //mods
         adminmenu =
         [
@@ -12,7 +12,7 @@ if ((getPlayerUID player) in ["76561198087662716","76561198101711327","765611979
 				["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]	
         ];};
-	if ((getPlayerUID player) in ["76561198062906574","76561198068272086"]) then { //admins
+	if ((getPlayerUID player) in [""]) then { //admins
         adminmenu =
         [
 			["",true],
@@ -20,7 +20,7 @@ if ((getPlayerUID player) in ["76561198087662716","76561198101711327","765611979
 				["", [-1], "", -5, [["expression", ""]], "1", "0"],
 			["Exit", [13], "", -3, [["expression", ""]], "1", "1"]	
         ];};
-	if ((getPlayerUID player) in ["76561198062906574","76561198068272086"]) then { // super admins
+	if ((getPlayerUID player) in ["76561198033377818","76561198087662716","76561198041863191"]) then { // super admins Buddytex, Clock, Pyro
 		adminmenu =
 		[
 			["",true],

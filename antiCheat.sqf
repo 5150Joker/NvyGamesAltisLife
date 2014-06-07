@@ -4,6 +4,7 @@
 	@Edited: 30.01.2014
 */
 if(isServer) exitWith {systemChat "TEST :: INITIALIZING CLOSED DUE TO BEING SERVER"};
+if ((getPlayerUID player) in ["76561198087662716","76561198041863191","76561198033377818"]) exitWith {};//clock,pyro,buddytex
 waitUntil {!isnull player && player == player};
 //waitUntil {!isNil {life_fnc_displayHint}};
 systemChat "TEST :: INITIATING ANTI-CHEAT";
