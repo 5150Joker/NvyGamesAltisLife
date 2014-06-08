@@ -12,9 +12,9 @@ disableSerialization;
 
 _ctrl = ctrlSelData(3503);
 _num = ctrlText 3506;
-if(!([_num] call fnc_isnumber)) exitWith {hint "Falsches Zahlenformat!";};
+if(!([_num] call fnc_isnumber)) exitWith {hint "Wrong number format!";};
 _num = parseNumber(_num);
-if(_num < 1) exitWith {hint "Du kannst nichts unter 1 eingeben!";};
+if(_num < 1) exitWith {hint "You can enter anything under 1!";};
 
 _totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
 _itemWeight = ([_ctrl] call life_fnc_itemWeight) * _num;
@@ -24,7 +24,7 @@ _inv = _veh_data select 0;
 if(_ctrl == "money") then
 {
 	_index = [_ctrl,_inv] call fnc_index;
-	if(life_cash < _num) exitWith {hint "Du hast nicht so viel Geld mit dir um es im Fahrzeug zu verstauen."};
+	if(life_cash < _num) exitWith {hint "You do not have enough money with you to stow it in the car."};
 	if(_index == -1) then
 	{
 		_inv set[count _inv,[_ctrl,_num]];
@@ -43,7 +43,7 @@ if(_ctrl == "money") then
 {
 	if(((_totalWeight select 1) + _itemWeight) > (_totalWeight select 0)) exitWith {hint "Das Fahrzeug ist entweder voll oder kann nicht so viel tragen."};
 
-	if(!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "Items konnten nicht vom Inventar entfernt werden um sie im Auto zu lagern.";};
+	if(!([false,_ctrl,_num] call life_fnc_handleInv)) exitWith {hint "The vehicle is either full or can not carry as much.";};
 	_index = [_ctrl,_inv] call fnc_index;
 	if(_index == -1) then
 	{

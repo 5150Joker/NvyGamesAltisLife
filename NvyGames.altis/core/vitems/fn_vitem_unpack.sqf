@@ -22,7 +22,7 @@ if(life_action_inUse) exitWith {};
 
 if( !([_shortname] call life_fnc_vitem_isVItem)) exitWith
 {
-	hint "Item ist kein virtuelles Item!";
+	hint "Item is not a virtual item!";
 };
 
 //find classname
@@ -36,14 +36,14 @@ foreach life_vitems_shrtToClass;
 
 if(_classname == "") exitWith
 {
-	hint "Item ist kein auspackbares Item!";
+	hint "Item is not an auspackbares item!";
 };
 
 life_action_inUse = true;
 
 //exec
 player say3D "unpack";
-hint "Item wird ausgepackt ...";
+hint "Item is unpacked ...";
 sleep 2;
 
 life_action_inUse = false;
@@ -71,7 +71,7 @@ if(_canadd) then
 {
 	if(!([false,_shortname,1] call life_fnc_handleInv)) exitWith
 	{			
-		hint "Konnte Item nicht nehmen!";
+		hint "Could Item not take!";
 	};
 
 	//Add item
@@ -89,13 +89,13 @@ if(_canadd) then
 	
 	[1,false] call life_fnc_sessionHandle;
 	[] call life_fnc_p_updateMenu;
-	hint "Erfolgreich ausgepackt.";
+	hint "Unpacked Successfully.";
 	
 	//Update clothing ##86
 	[] spawn life_fnc_updateClothing;
 }
 else
 {
-	hint "Item konnte nicht ausgepackt werden. Kein Platz!";	
+	hint "Item could not be unpacked. No place!";	
 };
 

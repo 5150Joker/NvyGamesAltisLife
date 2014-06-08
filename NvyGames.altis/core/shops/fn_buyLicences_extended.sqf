@@ -8,7 +8,7 @@ private["_display","_listbox","_shortname","_longname","_price","_hasLicense","_
 
 _buyables = _this select 3; //called from action => select 3rd argument
 
-hint format ["Der Händer verkauft %1 Lizenzen/Fähigkeiten.", count _buyables];
+hint format ["The dealer sold %1 Licenses / skills.", count _buyables];
 
 if(!dialog) then
 {

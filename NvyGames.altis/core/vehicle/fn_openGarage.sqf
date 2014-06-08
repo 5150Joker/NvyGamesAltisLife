@@ -16,7 +16,7 @@ _type = (_this select 3) select 1; //Air,Car,Ship
 
 if(player distance (getMarkerPos _spawn) > 30) exitWith
 {
-	hint "Du bist zu weit weg vom Garagenpunkt!";
+	hint "You are too far away from the garage point!";
 };
 
 //////
@@ -25,5 +25,5 @@ if(player distance (getMarkerPos _spawn) > 30) exitWith
 life_garage_type = _type;
 createDialog "Life_impound_menu";
 disableSerialization;
-ctrlSetText[2802,"Lade Fahrzeuge ..."];
+ctrlSetText[2802,"Loading vehicles..."];
 life_garage_sp = _spawn;

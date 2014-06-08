@@ -29,7 +29,7 @@ if(_isfree) then
 {
 	_price = 0; //$0 => free
 	
-	hint "Dieser Service ist kostenlos.";
+	hint "This service is free.";
 	//sleep 2;
 };
 
@@ -60,11 +60,11 @@ if(_veh distance impound_obj < 50) then
 		};
 	};
 	_check = nearestObjects[_pos,["LandVehicle","Air"],4];
-	if(count _check > 0) exitWith {hint "Dort ist momentan ein Fahrzeug.";};
+	if(count _check > 0) exitWith {hint "There is currently a vehicle.";};
 	if(_price > life_cash) then
 	{
 		_price = _price + 200;
-		if(_price > life_atmcash) exitWith {hint "Du hast nicht genug Geld auf deinem Bankkonto um dein Fahrzeug zurück zu bekommen."};
+		if(_price > life_atmcash) exitWith {hint "You did not get enough money in your bank account to your vehicle back."};
 		life_atmcash = life_atmcash - _price;
 		life_cash = life_cash + _price;
 	};

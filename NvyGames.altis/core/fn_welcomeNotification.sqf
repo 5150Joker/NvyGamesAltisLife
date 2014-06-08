@@ -23,9 +23,10 @@
 	"Mit Fahrzeugen interagieren"
 ];*/
 
-"" hintC parseText "<t><t size='1.5'>Willkommen auf dem Black Lagoon Altis Life Server!</t><br/><t color='#EE0000'>Wichtiger Hinweis:</t><br/><t>Setze UNBEDINGT die Aktion10-Taste in der ARMA 3 -Konfiguration auf z.B. Strg.</t></br><t>Du findest die Einstellung in </t><t color='#00FF00'>Konfigurieren - Steuerung - Indiv. Steuerung - Aktionstaste 10</t></t>";
+"" hintC parseText "<t><t size='1.5'>Welcome to Nvy Games Altis Life Server!</t><br/><t color='#EE0000'>Important:</t><br/><t>Setze Custom action 10 will be used to complete core actions in game. Set it to a key of your choice. By default it is left win key.</t></br><t>You can find the setting on</t><t color='#00FF00'>
+Configuration - Control Panel - Indiv. Control Panel - Action button 10</t></t>";
 
 
 sleep 6;
 
-hintSilent "Hinweis: Drücke H, um einen kleinen Tasten-Guide anzeigen zu lassen.";
+hintSilent "Note: To display a small guide press H!.";

@@ -16,7 +16,7 @@ switch (_classname) do
 		//Remove ammo
 		 _veh setVehicleAmmo 0;
 		 
-		 systemChat "Raketen wurden entfernt.";
+		 systemChat "Missiles were removed.";
 	};
 	
 	case "O_Heli_Light_02_F":
@@ -24,7 +24,7 @@ switch (_classname) do
 		//Remove ammo
 		 _veh setVehicleAmmo 0;
 		 
-		 systemChat "Raketen wurden entfernt.";
+		 systemChat "Missiles were removed.";
 	};
 	
 	case "B_Heli_Transport_01_F":
@@ -32,6 +32,6 @@ switch (_classname) do
 		//Remove ammo
 		 _veh removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red",[0]];
 		 
-		 systemChat "Minigunmunition wurde entfernt.";
+		 systemChat "Minigunmunition was removed.";
 	};
 };
