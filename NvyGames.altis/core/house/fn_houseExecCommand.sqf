@@ -12,7 +12,7 @@ _args = _this select 2;
 _data = _this select 3;
 
 //hintSilent format["Successful input cmd: %1", _cmd];
-hintSilent "Abfrage von Datenbank wurde beantwortet.";
+hintSilent "Query of the database has been answered.";
 
 //sleep 2;
 

@@ -1,4 +1,4 @@
 
 life_action_inUse = false;
 
-hint "Schloss wurde ausgetauscht. Kein anderer Spieler kann nun mehr auf das Haus zugreifen.";
+hint "Lock has been replaced. No other player may now be able to access the house.";

@@ -24,7 +24,7 @@ if(_datawritten) then
 {	
 	life_atmcash = life_atmcash + _illegal_value;
 	
-	hint format [ "Du hast $%1 Lohn bekommen.", _illegal_value ];
+	hint format [ "You $%1 obtain wage.", _illegal_value ];
 	
 	///Write
 	sleep 10;
@@ -32,7 +32,7 @@ if(_datawritten) then
 }
 else
 {
-	hint "Items konnten nicht beschlagnahmt werden!";
+	hint "Items could not be confiscated!";
 };
 
 

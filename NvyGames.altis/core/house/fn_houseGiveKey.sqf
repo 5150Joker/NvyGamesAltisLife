@@ -25,12 +25,12 @@ life_action_inUse = true;
 
 _index = lbCurSel 2100;
 
-if(_index == -1) exitWith {life_action_inUse = false; hint "Nichts ausgewählt."; };
+if(_index == -1) exitWith {life_action_inUse = false; hint "None Selected."; };
 
 _uid = lbData [2100, _index];
 _name = lbText [2100,_index];
 
-if(isNil "_uid") exitWith { life_action_inUse = false; hint "Ungültige id."; };
+if(isNil "_uid") exitWith { life_action_inUse = false; hint "Invalid id."; };
 
 //Check uid
 _existing = false;
@@ -50,14 +50,14 @@ if(([_exdata, "owner"] call life_fnc_houseExtractDataVal) == _uid) then
 	_existing = true;
 };
 
-if(_existing) exitWith { hint "Spieler hat bereits einen Schlüssel!"; life_action_inUse = false; };
+if(_existing) exitWith { hint "Player already has a key!"; life_action_inUse = false; };
 
 //Modify array
 _tparr = [_exdata, "trustedpersons"] call life_fnc_houseExtractDataVal;
 _tparr set [count _tparr, [_uid, _name ] ];
 
 //Call database
-hint "Frage Datenbank an ...";
+hint "Question to database ...";
 
 //call command
 [ [player ,_housename, _tparr, _name] , "HOUSE_fnc_DBgiveKey" ,false, false] call life_fnc_MP;

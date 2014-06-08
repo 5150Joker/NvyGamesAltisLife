@@ -39,6 +39,6 @@ if((_force || _checkout) && !life_dynperm_checkout_running) then
 	if (!isNull (findDisplay 29650)) exitWith
 	{
 		closeDialog 0;
-		hint "Dialog geschlossen, da Perms geladen werden.";
+		hint "Dialog box is closed because Perms are loaded.";
 	};
 };

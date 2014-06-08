@@ -5,15 +5,15 @@
 	Description:
 	Opens & initializes the chop shop menu.
 */
-if(life_action_inUse) exitWith {hint "Eine Aktion wird bereits ausgeführt..."};
+if(life_action_inUse) exitWith {hint "An action is already running..."};
 disableSerialization;
 private["_nearVehicles","_control"];
 _nearVehicles = nearestObjects [getMarkerPos (_this select 3),["Car","Truck"],25];
 
 life_chopShop = (_this select 3);
 //Error check
-if(count _nearVehicles == 0) exitWith {titleText["Es sind keine Fahrzeuge zum Verkauf in der Nähe.","PLAIN"];};
-if(!(createDialog "Chop_Shop")) exitWith {hint "Es gab ein Problem beim öffnen des Chop Shop Menüs."};
+if(count _nearVehicles == 0) exitWith {titleText["There are no vehicles for sale near.","PLAIN"];};
+if(!(createDialog "Chop_Shop")) exitWith {hint "There was a problem when opening the Chop Shop Menus."};
 
 _control = ((findDisplay 39400) displayCtrl 39402);
 {

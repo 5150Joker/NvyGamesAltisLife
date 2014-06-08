@@ -12,8 +12,8 @@ disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
-if(!isPlayer _curTarget) exitWith {hint "Ziel ist kein Spieler"; closeDialog 0; };
-if(side player == civilian) exitWith {hint "Du bist kein Cop"; closeDialog 0;}; //Bad side check?
+if(!isPlayer _curTarget) exitWith {hint "The target is not a player."; closeDialog 0; };
+if(side player == civilian) exitWith {hint "You're not a cop"; closeDialog 0;}; //Bad side check?
 
 
 _display = findDisplay 37400;

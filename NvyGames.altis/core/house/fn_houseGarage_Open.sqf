@@ -15,7 +15,7 @@ if(isNil "_exdata") exitWith
 _name = [_exdata, "name"] call life_fnc_houseExtractDataVal;
 _car_spawn = [_exdata, "marker_car_spawn"] call life_fnc_houseExtractDataVal;
 
-hint "Öffne Garage ...";
+hint "Open Garage ...";
 sleep 1;
 
 
@@ -24,7 +24,7 @@ sleep 1;
 life_garage_type = "Car";
 createDialog "Life_impound_menu_free";
 disableSerialization;
-ctrlSetText[2802,"Lade Fahrzeuge ..."];
+ctrlSetText[2802,"Loading vehicles ..."];
 life_garage_sp = _car_spawn;
 
 

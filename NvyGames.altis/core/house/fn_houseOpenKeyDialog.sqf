@@ -18,7 +18,7 @@ _name = [_exdata, "name"] call life_fnc_houseExtractDataVal;
 
 if(!(_exdata call life_fnc_houseCanAccess)) exitWith
 {
-	hint "Kein Zugriff!";
+	hint "No access!";
 };
 
 

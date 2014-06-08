@@ -108,14 +108,14 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "fed_car_1";
 		_dir = markerDir "fed_car_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 	};
 	
 	case "fed_air":
 	{
 		_sp = getMarkerPos "fed_air_1";
 		_dir = markerDir "fed_air_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 	};
 	
 	case "civ_ship_1":
@@ -242,7 +242,7 @@ switch(life_veh_shop) do
 _index = lbCurSel 2302;
 _veh = lbData[2302,_index];
 
-if(!([_veh] call life_fnc_vehShopLicenses) && _veh != "B_MRAP_01_hmg_F") exitWith {hint "Du hast nicht die benötigte Lizenz!"};
+if(!([_veh] call life_fnc_vehShopLicenses) && _veh != "B_MRAP_01_hmg_F") exitWith {hint "You do not have the required license!"};
 
 
 _color = lbValue[2303,(lbCurSel 2303)];
@@ -263,15 +263,15 @@ if(_price < 0) then
 	foreach life_vehicle_config_new;
 };
 
-if(_price < 0) exitWith {hint "Ungültiger Preis";};
-if(_price == 0) exitWith{hint "Kauf abgebrochen! Preis ist $0!";};
+if(_price < 0) exitWith {hint "Invalid price";};
+if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 
-if(life_cash < _price) exitWith {hint "Du hast nicht genug Geld."};
-hint "Das kann ein zwei Sekunden dauern...";
+if(life_cash < _price) exitWith {hint "You do not have enough money."};
+hint "This may take a two seconds...";
 sleep floor(random 3);
 
-if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 
 _sv = false;
 
@@ -285,7 +285,7 @@ if(_veh == "serv_truck") then
 {
 	_name = getText(configFile >> "CfgVehicles" >> _veh >> "displayName");
 };
-hint format["Du hast einen %1 für $%2 gekauft.",_name,[_price] call life_fnc_numberText];
+hint format["You have a %1 for $%2 bought.",_name,[_price] call life_fnc_numberText];
 _vehicle = _veh createVehicle _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 if(_veh == "B_MRAP_01_hmg_F") then
@@ -333,4 +333,4 @@ if((life_veh_shop == "civ_air_1" OR life_veh_shop == "civ_air_2") && (typeOf _ve
 [1,false] call life_fnc_sessionHandle;
 
 //Add notation
-titleText ["Hinweis: Du hast das Fahrzeug nur gemietet und kannst es nicht in der Garage parken.", "PLAIN"];
+titleText ["Note: You only have rented the vehicle and can not park in the garage there.", "PLAIN"];

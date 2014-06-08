@@ -2,39 +2,39 @@
 <Project name="Altis Life RPG">
 	<Package name="Global">
 		<Key ID="STR_Global_Close">
-			<Original>Schließen</close>
+			<Original>Close</close>
 		</Key>
 		<Key ID="STR_Global_Sell">
-			<Original>Verkaufen</Original>
+			<Original>Sell</Original>
 		</Key>
 		<Key ID="STR_Global_Buy">
-			<Original>Kaufen</Original>
+			<Original>Buy</Original>
 		</Key>
 		<Key ID="STR_Global_Give">
-			<Original>Geben</Original>
+			<Original>Give</Original>
 		</Key>
 		<Key ID="STR_Global_Use">
-			<Original>Benutzen</Original>
+			<Original>Use</Original>
 		</Key>
 		<Key ID="STR_Global_Remove">
-			<Original>Entfernen</Original>
+			<Original>Remove</Original>
 		</Key>
 		<Key ID="STR_Global_Settings">
-			<Original>Einstellungen</Original>
+			<Original>Settings</Original>
 		</Key>
 		<Key ID="STR_Global_BuyPerm">
-			<Original>Kaufen</Original>
+			<Original>Buy Permanently</Original>
 		</Key>
 		<Key ID="STR_Global_NoSelection">
-			<Original>Du hast nichts ausgewählt.</Original>
+			<Original>You have not selcted anything.</Original>
 		</Key>
 	</Package>
 	<Package name="Admin_Menu">
 		<Key ID="STR_Admin_Title">
-			<Original>Admin Menü</Original>
+			<Original>Admin Menu</Original>
 		</Key>
 		<Key ID="STR_Admin_GetID">
-			<Original>ID abrufen</Original>
+			<Original>Get Id</Original>
 		</Key>
 	</Package>
 	<Package name="ATM_Menu">
@@ -42,13 +42,13 @@
 			<Original>Bankaccount-Management</Original>
 		</Key>
 		<Key ID="STR_ATM_Withdraw">
-			<Original>Abheben</Original>
+			<Original>Withdraw</Original>
 		</Key>
 		<Key ID="STR_ATM_Deposit">
-			<Original>Einzahlen</Original>
+			<Original>Deposit</Original>
 		</Key>
 		<Key ID="STR_ATM_Transfer">
-			<Original>Transferieren</Original>
+			<Original>Transfer</Original>
 		</Key>
 	</Package>
 	<Package name="Cell_Phone">
@@ -56,16 +56,16 @@
 			<Original>Altis Mobile</Original>
 		</Key>
 		<Key ID="STR_CELL_TextToSend">
-			<Original>Nachricht:</Original>
+			<Original>Message:</Original>
 		</Key>
 		<Key ID="STR_CELL_TextMSGBtn">
-			<Original>Nachricht:</Original>
+			<Original>Message:</Original>
 		</Key>
 		<Key ID="STR_CELL_TextPolice">
-			<Original>Polizei anschreiben</Original>
+			<Original>Text Police</Original>
 		</Key>
 		<Key ID="STR_CELL_TextAdmins">
-			<Original>Admins anschreiben</Original>
+			<Original>Text Admins</Original>
 		</Key>
 		<Key ID="STR_CELL_AdminMsg">
 			<Original>Admin Message</Original>

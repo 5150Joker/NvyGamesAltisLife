@@ -12,13 +12,13 @@ if(isNil "_exdata") exitWith
 	hint "Error: exdata is NULL. Cancelling.";
 };
 
-if( (call life_donator) < 1) exitWith { hint "Du bist kein Donator!"; };
-if( ! ([_exdata, "donator"] call life_fnc_houseExtractDataVal) ) exitWith { hint "Das ist kein Donator-Haus!"; };
+if( (call life_donator) < 1) exitWith { hint "You are not a donor!"; };
+if( ! ([_exdata, "donator"] call life_fnc_houseExtractDataVal) ) exitWith { hint "This is not a donor-house!"; };
 
 _name = [_exdata, "name"] call life_fnc_houseExtractDataVal;
 _car_spawn = [_exdata, "marker_car_spawn"] call life_fnc_houseExtractDataVal;
 
-hint "Öffne Garage ...";
+hint "Open Garage ...";
 sleep 1;
 
 
@@ -27,7 +27,7 @@ sleep 1;
 life_garage_type = "Air";
 createDialog "Life_impound_menu_free";
 disableSerialization;
-ctrlSetText[2802,"Lade Fahrzeuge ..."];
+ctrlSetText[2802,"loading vehicles ..."];
 life_garage_sp = _car_spawn;
 
 

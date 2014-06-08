@@ -101,7 +101,7 @@ ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 
 if(_struct == "") then
 {
-	_struct = "Keine Lizenzen/Fähigkeiten";
+	_struct = "No licenses / skills";
 };
 
 _lic ctrlSetStructuredText parseText format["

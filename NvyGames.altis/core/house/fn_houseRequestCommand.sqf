@@ -4,7 +4,7 @@
 *Sends data to @life-server to process database stuff
 **/ 
 
-hint "Frage Datenbank ab ...";
+hint "Question from database ...";
 
 private["_command","_args","_house", "_query"];
 

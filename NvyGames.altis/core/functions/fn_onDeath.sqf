@@ -10,7 +10,7 @@ _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _source = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
 
-cutText["Warte um zu respawnen....","BLACK FADED"];
+cutText["Waiting to respawn to....","BLACK FADED"];
 0 cutFadeOut 9999999;
 
 if(playerSide == civilian) then
@@ -25,7 +25,7 @@ if(side _source != west && alive _source) then
 	//##66 if is in rebel area => not wanted
 	if(_source distance (getMarkerPos "area_rebellen_1") < (2000 / 2)) exitWith
 	{
-		systemChat "Du bist im Rebellengebiet getötet worden. Die Polizei hält sich da raus!";
+		systemChat "You have been killed in rebel territory. The police keeps out of there!";
 	};
 
 
@@ -46,7 +46,7 @@ if(side _source == west && !life_use_atm) then
 {
 	if(life_cash != 0) then
 	{
-		[format["$%1 wurden der Staatsbank zurückgeführt, da der Bankräuber getötet wurde.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[format["$%1 the State Bank were returned because the bank robber was killed.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		life_cash = 0;
 	};
 };

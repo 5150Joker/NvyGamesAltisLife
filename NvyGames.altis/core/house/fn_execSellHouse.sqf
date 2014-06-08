@@ -21,17 +21,17 @@ _price = _house_args select 0; //for refund
 
 if(_datawritten) then
 {
-	hint "Haus wurde erfolgreich verkauft.";
-	[[0,format["%1 hat sein Haus verkauft.", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	hint "House was sold successfully.";
+	[[0,format["%1 has sold his house.", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
 }
 else
 {
-	hint "Haus konnte nicht verkauft werden.";
+	hint "House could not be sold.";
 	
 	sleep 2;
 	
-	hint "Geld wird zurückgezogen.";
+	hint "Money is withdrawn.";
 	
 	life_atmcash = life_atmcash - _price;
 	sleep 10;

@@ -45,7 +45,7 @@ if(rank player != "PRIVATE") then
 	player setRank "PRIVATE";
 };
 [player] joinSilent (createGroup civilian);
-hint "Du hast die Gang verlassen.";
+hint "You left the gang.";
 
 
 closeDialog 0;

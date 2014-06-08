@@ -44,7 +44,7 @@ if(_money > 0) then
 	life_atmcash = life_atmcash + _money;	
 	[1,false] call life_fnc_sessionHandle;
 	
-	hint "Dein Geld wurde gewaschen!";
+	hint "Your money was washed!";
 	sleep 5;
-	hint format["Du hast $%1 auf dein Bankkonto bekommen.", [_money] call life_fnc_numberText];
+	hint format["You $%1 get to your bank account.", [_money] call life_fnc_numberText];
 };

@@ -109,14 +109,14 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "fed_car_1";
 		_dir = markerDir "fed_car_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 	};
 	
 	case "fed_air":
 	{
 		_sp = getMarkerPos "fed_air_1";
 		_dir = markerDir "fed_air_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 	};
 	
 	case "civ_ship_1":
@@ -243,7 +243,7 @@ switch(life_veh_shop) do
 _index = lbCurSel 2302;
 _veh = lbData[2302,_index];
 //if(_veh == "B_G_Offroad_01_armed_F" OR _veh == "B_MRAP_01_hmg_F") exitWith {hint "Das Fahrzeug kann nicht gekauft werden.";};
-if(!([_veh] call life_fnc_vehShopLicenses)) exitWith {hint "Du besitzt nicht die benötigte Lizenz!"};
+if(!([_veh] call life_fnc_vehShopLicenses)) exitWith {hint "You do not have the required license!"};
 _color = lbValue[2303,(lbCurSel 2303)];
 _price = lbValue[2302,(lbCurSel 2302)];
 
@@ -263,16 +263,16 @@ if(_price < 0) then
 	foreach life_vehicle_config_new;
 };
 
-if(_price < 0) exitWith {hint "Ungültiger Preis";};
-if(_price == 0) exitWith{hint "Kauf abgebrochen! Preis ist $0!";};
+if(_price < 0) exitWith {hint "Invalid price";};
+if(_price == 0) exitWith{hint "Purchase aborted! Price is $0!";};
 
 
 _price = round(_price * 1.5); //It's a permanent vehicle, add some bank to it!
-if(life_cash < _price) exitWith {hint format["Du hast nicht genug Geld. Du benötigst %1", [_price] call life_fnc_numberText]; };
-hint "Das kann ein zwei Sekunden dauern...";
+if(life_cash < _price) exitWith {hint format["You do not have enough money. you need %1", [_price] call life_fnc_numberText]; };
+hint "This may take a two seconds...";
 sleep floor(random 3);
 
-if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "Ein Fahrzeug ist auf dem Spawnpunkt."};
+if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "A vehicle is on the spawn point."};
 
 _sv = false;
 
@@ -286,7 +286,7 @@ if(_veh == "serv_truck") then
 {
 	_name = getText(configFile >> "CfgVehicles" >> _veh >> "displayName");
 };
-hint format["Du hast einen %1 für $%2 gekauft.",_name,[_price] call life_fnc_numberText];
+hint format["You have a %1 for $%2 bought.",_name,[_price] call life_fnc_numberText];
 _vehicle = _veh createVehicle _sp;
 _vehicle setVectorUp (surfaceNormal _sp);
 _vehicle setPos _sp;

@@ -14,7 +14,7 @@ disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
 
-if(!isPlayer _curTarget) exitWith {hint "Ziel ist kein Spieler"; closeDialog 0; };
+if(!isPlayer _curTarget) exitWith {hint "The target is not a player."; closeDialog 0; };
 //if(!license_civ_rebel) exitWith {hint "Du bist kein Rebelle"; closeDialog 0;}; //Bad side check?
 /*
  * Converted rebInteraction to civInteraction
@@ -48,7 +48,7 @@ _bUnrestrain buttonSetAction "closeDialog 0; [life_pInact_curTarget] call life_f
 //_bShowLicenses buttonSetAction "[[player],""life_fnc_licenseCheck"",life_pInact_curTarget,FALSE] spawn life_fnc_MP";
 
 //Set _bTorture Button
-_bTorture ctrlSetTooltip "Foltern";
+_bTorture ctrlSetTooltip "Torture";
 _bTorture buttonSetAction "[life_pInact_curTarget] spawn life_fnc_TorturePlayer; closeDialog 0;";
 
 

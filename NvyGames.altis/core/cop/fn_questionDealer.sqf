@@ -7,7 +7,7 @@
 */
 private["_sellers","_names"];
 _sellers = (_this select 0) getVariable["sellers",[]];
-if(count _sellers == 0) exitWith {hint "Niemand hat in letzter Zeit etwas diesem Dealer verkauft."}; //No data.
+if(count _sellers == 0) exitWith {hint "No one has sold lately something this dealer."}; //No data.
 life_action_inUse = true;
 _names = "";
 {
@@ -19,6 +19,6 @@ _names = "";
 	_names = _names + format["%1<br/>",_x select 1];
 } foreach _sellers;
 
-hint parseText format["Folgende Leute haben in letzer Zeit dem Dealer etwas verkauft:<br/><br/>%1",_names];
+hint parseText format["The following people have the dealer sells something in Last time:<br/><br/>%1",_names];
 (_this select 0) setVariable["sellers",[],true];
 life_action_inUse = false;

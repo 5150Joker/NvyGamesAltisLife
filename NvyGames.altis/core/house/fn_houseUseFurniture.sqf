@@ -12,7 +12,7 @@ _weighttoadd = 10;
 if( !(_shortname in ["uitem_furniture_01", "uitem_furniture_02", "uitem_furniture_03", "uitem_furniture_04", "uitem_furniture_05"]) ) exitWith {};
 if(life_action_inUse) exitWith {};
 
-hint "Bitte warten ...";
+hint "Please wait ...";
 
 life_action_inUse = true;
 
@@ -37,6 +37,6 @@ if([false, _shortname, 1] call life_fnc_handleInv) then
 }
 else
 {
-	hint "Konnte Item nicht aus Inventar nehmen!";
+	hint "Could not take item from inventory!";
 	life_action_inUse = false;
 };

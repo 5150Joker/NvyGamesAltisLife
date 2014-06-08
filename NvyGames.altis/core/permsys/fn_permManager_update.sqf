@@ -38,7 +38,7 @@ ctrlSetText[1200, (([] call life_fnc_perms) select _permindex) select 5];
 
 if( !([_permid, "VIEW"] call life_fnc_permRule) && !life_permmanager_admin) exitWith
 {
-	systemChat "Du kannst nicht sehen, welche Personen in der Gruppe sind!";
+	systemChat "You can not see what people are in the group!";
 };
 
 //Send to all players: populate list

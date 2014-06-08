@@ -18,7 +18,7 @@ _price = [_exdata, "price"] call life_fnc_houseExtractDataVal;
 //Check license
 if (!license_civ_home && !license_cop_home) exitWith
 {
-	hint "Du kannst noch kein Haus kaufen. Besorge dir eine Eigentumsurkunde!";
+	hint "You can not buy a house yet. Obtain a house license!";
 };
 
 //Check money
@@ -28,14 +28,14 @@ if ((life_cash - _price) < 0) then //Not enough money
 	_canbuy = false;
 	if ((life_atmcash - _price) >= 0) then //not enough money in atmcash
 	{
-		hint "Du hast nicht genug Geld!";
+		hint "You do not have enough money!";
 		_canbuy = true;
 	};
 };
 
 if(_canbuy) then
 {
-	hint "Frage Datenbank an ... Haus kaufen";
+	hint "Buy database issue ... House";
 
 	//call command
 	[ [_name, player, _price] , "HOUSE_fnc_DBbuyHouse" ,false, false] call life_fnc_MP;
@@ -54,5 +54,5 @@ if(_canbuy) then
 }
 else
 {
-	hint "Du hast nicht genug Geld!";
+	hint "You do not have enough money!";
 };

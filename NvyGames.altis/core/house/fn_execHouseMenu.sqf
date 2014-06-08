@@ -18,7 +18,7 @@ hintSilent "Getting exdata";
 _exdata = _house_data call life_fnc_houseExtractData;
 hintSilent "Exdata parsed";
 
-if (count _exdata == 0) exitWith { hint "Konnte Haus nicht laden."; };
+if (count _exdata == 0) exitWith { hint "Could not load home."; };
 
 //Set player variable house_current_exdata
 missionNameSpace setVariable ["house_current_exdata", _exdata];
@@ -59,13 +59,13 @@ _donator = [_exdata, "donator"] call life_fnc_houseExtractDataVal;
 
 if(!_canview) exitWith
 {
-	hint "Das Haus gehort dir nicht!";
+	hint "The house does not belong to you!";
 	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
 if( [_house_name] call life_fnc_houseIsInuse ) exitWith
 {
-	hint "Jemand anderes greift bereits auf das Haus zu!";
+	hint "Someone else is already accessing the inventory!";
 };
 
 
@@ -103,11 +103,11 @@ if( [_exdata, "owned"] call life_fnc_houseExtractDataVal ) then //If owned => Pl
 	//Set new text
 	if(!_isaccessonly) then 
 	{ 
-		(_display displayCtrl 1101) ctrlSetStructuredText parseText "<t size='1.1'>Willkommen zu Hause!</t>"; 
+		(_display displayCtrl 1101) ctrlSetStructuredText parseText "<t size='1.1'>Welcome home!</t>"; 
 	}
 	else 
 	{ 
-		(_display displayCtrl 1101) ctrlSetStructuredText parseText format["<t size='1.1'>Willkommen im Haus von %1!</t>", [_exdata, "ownername"] call life_fnc_houseExtractDataVal ]; 
+		(_display displayCtrl 1101) ctrlSetStructuredText parseText format["<t size='1.1'>Welcome to the home of %1!</t>", [_exdata, "ownername"] call life_fnc_houseExtractDataVal ]; 
 	};
 	
 	
@@ -115,11 +115,11 @@ if( [_exdata, "owned"] call life_fnc_houseExtractDataVal ) then //If owned => Pl
 	//Update price
 	if(!_buyable) then
 	{
-		(_display displayCtrl 1102) ctrlSetStructuredText parseText "<t size='2' align='center'>Unverkäuflich</t>";
+		(_display displayCtrl 1102) ctrlSetStructuredText parseText "<t size='2' align='center'>Unsellable</t>";
 	}
 	else
 	{
-		(_display displayCtrl 1102) ctrlSetStructuredText parseText format ["<t size='1.6' align='center'>Wert: $%1</t>", [_house_price_sell] call life_fnc_numberText]; //use numbertext here to prevent evil shit
+		(_display displayCtrl 1102) ctrlSetStructuredText parseText format ["<t size='1.6' align='center'>Value: $%1</t>", [_house_price_sell] call life_fnc_numberText]; //use numbertext here to prevent evil shit
 	};
 	
 	//Set sell button
@@ -145,7 +145,7 @@ if( [_exdata, "owned"] call life_fnc_houseExtractDataVal ) then //If owned => Pl
 		(_display displayCtrl 2406) ctrlEnable true;
 		(_display displayCtrl 2406) buttonSetAction "[] spawn life_fnc_houseAirGarage_Open; closeDialog 0;";
 		
-		systemChat "Haus ist ein Donator-Haus. Wenn du ein Donator bist, kannst du erweiterte Features nutzen!";
+		systemChat "House is a donor-house. If you're a donor, you can use advanced features!";
 	}
 	else
 	{
@@ -172,11 +172,11 @@ else
 	//Update price
 	if(!_buyable) then
 	{
-		(_display displayCtrl 1102) ctrlSetStructuredText parseText "<t size='2' align='center'>Unverkäuflich</t>";
+		(_display displayCtrl 1102) ctrlSetStructuredText parseText "<t size='2' align='center'>Unsellable</t>";
 	}
 	else
 	{
-		(_display displayCtrl 1102) ctrlSetStructuredText parseText format ["<t size='2' align='center'>Wert: $%1</t>", [_house_price] call life_fnc_numberText];
+		(_display displayCtrl 1102) ctrlSetStructuredText parseText format ["<t size='2' align='center'>Value: $%1</t>", [_house_price] call life_fnc_numberText];
 	};
 	
 };
@@ -185,7 +185,7 @@ else
 (_display displayCtrl 2401) ctrlEnable true; //Disable buy
 (_display displayCtrl 2401) buttonSetAction "[] spawn life_fnc_buyHouse; closeDialog 0;";*/
 
-hint format ["Fur Supportzwecke: Haus-Name: %1", _house_name];
+hint format ["For support purposes: House Name: %1", _house_name];
 
 /*sleep 20;
 

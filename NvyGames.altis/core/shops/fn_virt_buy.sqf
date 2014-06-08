@@ -32,15 +32,15 @@ if(_marketprice != -1) then
 ///////////
 
 
-if(!([_amount] call fnc_isnumber)) exitWith {hint "Du hast keine aktuelle Anzahl angegeben.";};
+if(!([_amount] call fnc_isnumber)) exitWith {hint "You've given no current number.";};
 _diff = [_type,parseNumber(_amount),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 _amount = parseNumber(_amount);
-if(_diff <= 0) exitWith {hint "Du hast nicht genug Stauraum für diese Anzahl!"};
+if(_diff <= 0) exitWith {hint "You do not have enough space for this number!"};
 _amount = _diff;
 
 if(_isillegal) then
 {
-	if((_price * _amount) > _illegalmoney) exitWith {hint "Du hast nicht genug illegales Geld!"};
+	if((_price * _amount) > _illegalmoney) exitWith {hint "You do not have enough illegal money!"};
 
 	_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
@@ -66,13 +66,13 @@ if(_isillegal) then
 }
 else
 {
-	if((_price * _amount) > life_cash) exitWith {hint "Du hast nicht so viel Geld!"};
+	if((_price * _amount) > life_cash) exitWith {hint "You do not have so much money!"};
 
 	_name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
 	if(([true,_type,_amount] call life_fnc_handleInv)) then
 	{
-		hint format["Du kaufst %1 %2 für $%3",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
+		hint format["You buy %1 %2 for $%3",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 		life_cash = life_cash - (_price * _amount);
 	
 		if(_marketprice != -1) then 

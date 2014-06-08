@@ -9,7 +9,7 @@
 
 if(side player  == west) exitWith
 {
-	hint "Du bist ein Cop!";
+	hint "You're a cop!";
 };
 
 if(!(createDialog "launderdlg")) exitWith {};

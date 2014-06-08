@@ -18,7 +18,7 @@ _house_data = call compile format["%1", _house_data]; //compile data
 //////////////////Parse data
 _exdata = _house_data call life_fnc_houseExtractData;
 
-if (count _exdata == 0) exitWith { hint "Konnte Haus nicht laden."; };
+if (count _exdata == 0) exitWith { hint "Could not load home."; };
 
 //Set player variable house_current_exdata
 missionNamespace setVariable ["house_current_exdata", _exdata];
@@ -47,13 +47,13 @@ _canview = _exdata call life_fnc_houseCanAccess; //replaced by life_fnc_houseCan
 
 if(!_canview) exitWith
 {
-	hint "Das Haus gehort dir nicht!";
+	hint "The house does not belong to you!";
 	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
 if( [_house_name] call life_fnc_houseIsInuse ) exitWith
 {
-	hint "Jemand anderes greift bereits auf das Inventar zu!";
+	hint "Someone else is already accessing the inventory!";
 };
 
 /////////////////MAIN INVENTORY METHOD
@@ -62,7 +62,7 @@ if( [_house_name] call life_fnc_houseIsInuse ) exitWith
 if(dialog) exitWith {hint "Already using a dialog.";};
 
 //Allg. action inuse
-if(life_action_inUse) exitWith {hint "Du machst gerade was anderes.";};
+if(life_action_inUse) exitWith {hint "You're doing something else.";};
 
 life_action_inUse = true;
 

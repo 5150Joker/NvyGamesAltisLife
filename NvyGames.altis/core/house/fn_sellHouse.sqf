@@ -19,7 +19,7 @@ _price = [_exdata, "price_sell"] call life_fnc_houseExtractDataVal; //USE PRICE_
 
 if(([_exdata, "owner"] call life_fnc_houseExtractDataVal) == getPlayerUID player) then
 {
-	hint "Frage Datenbank an ... Haus verkaufen";
+	hint "Sell ​​database Question ... House";
 
 	//call command
 	[ [_name, player, _price] , "HOUSE_fnc_DBsellHouse" ,false, false] call life_fnc_MP;
@@ -31,5 +31,5 @@ if(([_exdata, "owner"] call life_fnc_houseExtractDataVal) == getPlayerUID player
 }
 else
 {
-	hint "Dir gehört das Haus nicht!";
+	hint "You don't own this house!";
 };

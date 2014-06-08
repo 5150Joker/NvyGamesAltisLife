@@ -21,15 +21,15 @@ _datawritten = _return;
 
 if(_datawritten) then
 {
-	hint "Möbel wurden erfolgreich hinzugefügt.";
+	hint "Furniture has been successfully added.";
 }
 else
 {
-	hint "Fehler beim Hinzufügen von Möbelstück!";
+	hint "Error adding piece of furniture!";
 	
 	sleep 2;
 	
-	hint "Item wird zurückerstattet.";
+	hint "Item will be refunded.";
 	
 	[true,_shortname,1] call life_fnc_handleInv;
 	[] call life_fnc_p_updateMenu;

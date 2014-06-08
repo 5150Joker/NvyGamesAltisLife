@@ -18,7 +18,7 @@ _count = ctrlText 1400;
 
 if(! ([_count] call fnc_isnumber)) exitWith
 {
-	hint "Du musst eine Zahl eingeben.";
+	hint "You have to enter a number.";
 };
 
 _count = parseNumber _count; //requested number
@@ -26,7 +26,7 @@ _count = round _count;
 
 if(_count < 1) then
 {
-	hint "Ungültige Zahl eingegeben.";
+	hint "Invalid number entered.";
 };
 
 //Illegal money
@@ -35,9 +35,9 @@ _illegal_money = missionNamespace getVariable "life_inv_illegalmoney";
 
 if(_count > _illegal_money) exitWith
 {
-	hint "Du hast zu viel Geld angegeben!";
+	hint "You have given too much money!";
 	sleep 2;
-	hint format ["Du hast nur $%1",  [_illegal_money] call life_fnc_numberText];
+	hint format ["You only have $%1",  [_illegal_money] call life_fnc_numberText];
 };
 
 ////TODO: balancing
@@ -46,7 +46,7 @@ _finalmoney = round(_count * _percentage);
 
 if( (missionNamespace getVariable ["__launder_dlg_confirm", -1]) != _count) then
 {
-	hint format["Du bekommst $%1 auf dein Konto, wenn du diesen Betrag waschen lässt. Klicke nochmal auf den Waschen-Button, um zu bestätigen.", [_finalmoney] call life_fnc_numberText];
+	hint format["You get $%1 on your account when you can wash this amount. Click again on the washing-button to confirm.", [_finalmoney] call life_fnc_numberText];
 	
 	missionNamespace setVariable ["__launder_dlg_confirm", _count];
 }

@@ -27,7 +27,7 @@ if(life_action_inUse) exitWith {
 //##89
 if(player getVariable ["restrained", false]) exitWith
 {
-	hintSilent "Du bist gefesselt!";
+	hintSilent "You're tied up!";
 
 	_handled = false;
 	_handled;
@@ -35,7 +35,7 @@ if(player getVariable ["restrained", false]) exitWith
 
 if(life_hands_up) exitWith
 {
-	hintSilent "Du hast deine Hände oben!";
+	hintSilent "You got your hands up!";
 
 	_handled = false;
 	_handled;
@@ -116,11 +116,11 @@ switch (_code) do
 			if([false,"uitem_handcuffs",1] call life_fnc_handleInv) then
 			{
 				[] call life_fnc_restrainAction;
-				hint "Benutze die Action10-Taste, um weitere Aktionen anzuzeigen";
+				hint "Use the Action button to see more actions";
 			}
 			else
 			{
-				hint "Du hast keine Handschellen dabei!";
+				hint "You have no Handcuffs there!";
 			};
 		}
 		else
@@ -130,11 +130,11 @@ switch (_code) do
 				if([false,"uitem_handcuffs",1] call life_fnc_handleInv) then
 				{
 					[] call life_fnc_restrainAction;
-					hint "Benutze die Action10-Taste, um weitere Aktionen anzuzeigen";
+					hint "Use the Action button to see more actions";
 				}
 				else
 				{
-					hint "Du hast keine Handschellen dabei!";
+					hint "You have no Handcuffs there!";
 				};
 			};
 		};
@@ -265,7 +265,7 @@ switch (_code) do
 						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
 					//systemChat "You have unlocked your vehicle.";
-					hint composeText [ image "icons\unlock.paa", "  Fahrzeug aufgeschlossen" ];
+					hint composeText [ image "icons\unlock.paa", "  open vehicle" ];
 					
 					//play sound
 					//_veh say3D "Car_Unlock";
@@ -282,7 +282,7 @@ switch (_code) do
 						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
 					
-					hint composeText [ image "icons\lock.paa", "  Fahrzeug abgeschlossen" ];
+					hint composeText [ image "icons\lock.paa", "  locked vehicle" ];
 					//systemChat "You have locked your vehicle.";
 					
 					//play sound

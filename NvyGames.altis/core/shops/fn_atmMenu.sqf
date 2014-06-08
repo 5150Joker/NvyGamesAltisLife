@@ -9,7 +9,7 @@ private["_display","_text","_units","_type"];
 
 if(!life_use_atm) exitWith
 {
-	hint "Weil du die Staatsbank ausgeraubt hast kannst du den Bankautomaten für 5 Minuten nicht benutzen.";
+	hint "Because you have robbed the State Bank you can not use the ATMs for 5 minutes.";
 };
 
 if(!dialog) then

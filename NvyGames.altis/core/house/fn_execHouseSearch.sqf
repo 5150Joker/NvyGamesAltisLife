@@ -14,7 +14,7 @@ _house_data = call compile format["%1", _house_data]; //compile data
 //////////////////Parse data
 _exdata = _house_data call life_fnc_houseExtractData;
 
-if (count _exdata == 0) exitWith { hint "Konnte zugehoriges Haus nicht laden."; };
+if (count _exdata == 0) exitWith { hint "Could not load the associated house."; };
 
 //Set player variable house_current_exdata
 missionNameSpace setVariable ["house_current_exdata", _exdata];
@@ -40,7 +40,7 @@ if( [_exdata, "owned"] call life_fnc_houseExtractDataVal ) then //If owned
 
 if(_canview) exitWith
 {
-	hint "Du kannst das Haus nicht durchsuchen!";
+	hint "You can not search the house!";
 	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
@@ -53,7 +53,7 @@ if(_canview) exitWith
 
 if( [_house_name] call life_fnc_houseIsInuse ) exitWith
 {
-	hint "Jemand anderes greift bereits auf das Haus zu!";
+	hint "Someone else is already accessing the house!";
 };
 
 
@@ -65,7 +65,7 @@ if( [_house_name] call life_fnc_houseIsInuse ) exitWith
 if(dialog) exitWith {hint "Already using a dialog.";};
 
 //Allg. action inuse
-if(life_action_inUse) exitWith {hint "Du machst gerade was anderes.";};
+if(life_action_inUse) exitWith {hint "You're doing something else.";};
 
 if(!createDialog "house_houseSearchDlg") exitWith {hint "Failed Creating Dialog";}; //Couldn't create the menu?
 disableSerialization;
@@ -123,7 +123,7 @@ if(__illegal_value == 0) then
 	ctrlEnable [2402, false];
 	
 	//message
-	ctrlSetText [1000, "Keine illegalen Gegenstände gefunden."];
+	ctrlSetText [1000, "No illegal items found."];
 }
 else
 {
@@ -131,7 +131,7 @@ else
 	ctrlEnable [2402, true];
 	
 	//message
-	ctrlSetText [1000, format ["Wert: $%1! Besitzer: %2", __illegal_value, [_exdata, "ownername"] call life_fnc_houseExtractDataVal ]];
+	ctrlSetText [1000, format ["Value: $%1! Owner: %2", __illegal_value, [_exdata, "ownername"] call life_fnc_houseExtractDataVal ]];
 };
 
 //Set variable illegal value
