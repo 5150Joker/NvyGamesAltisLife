@@ -51,7 +51,7 @@ if(_shortname == "") exitWith
 
 life_action_inUse = true;
 
-hintSilent "Packe ein ...";
+hintSilent "Pack a ...";
 sleep 2;
 
 /////////////////
@@ -95,7 +95,7 @@ if ([false, "box" , 1] call life_fnc_handleInv) then //remove item
 			};
 			default
 			{
-				hint "Fehler!";
+				hint "Error!";
 				[false, _shortname, 1] call life_fnc_handleInv;
 				[true, "box", 1] call life_fnc_handleInv
 			};
@@ -119,13 +119,13 @@ if ([false, "box" , 1] call life_fnc_handleInv) then //remove item
 	}
 	else
 	{
-		hint "Kein Inventarplatz!";
+		hint "No inventory space!";
 		[true, "box" , 1] call life_fnc_handleInv;
 	};
 }
 else
 {
-	hint "Keine Kiste mehr!";
+	hint "No more box!";
 };
 
 life_action_inUse = false;

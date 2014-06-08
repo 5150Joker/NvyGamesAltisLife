@@ -2,33 +2,33 @@
 	private["_fnc_food","_fnc_water"];
 	_fnc_food = 
 	{
-		if(life_hunger < 2) then {player setDamage 1; hint "Du hast dich zu tode gehungert.";}
+		if(life_hunger < 2) then {player setDamage 1; hint "You've starved to death.";}
 		else
 		{
 		life_hunger = life_hunger - 10;
 		[] call life_fnc_hudUpdate;
-		if(life_hunger < 2) then {player setDamage 1; hint "Du hast dich zu tode gehungert.";};
+		if(life_hunger < 2) then {player setDamage 1; hint "You've starved to death.";};
 		switch(life_hunger) do {
-			case 30: {hint "Du hast eine Weile nichts gegessen, du solltest bald etwas essen!";};
-			case 20: {hint "Du fängst an zu verhungern, du solltest etwas essen oder du stirbst!";};
-			case 10: {hint "Du verhungerst nun, du wirst sehr bald sterben wenn du nicht schnell etwas isst!";player setFatigue 1;};
+			case 30: {hint "You've eaten nothing for a while, you should eat something soon!";};
+			case 20: {hint "You start to starve, you should eat something or you die!";};
+			case 10: {hint "You are now starve to death, you will die very soon if you do not eat something soon!";player setFatigue 1;};
 			};
 		};
 	};
 	
 	_fnc_water = 
 	{
-		if(life_thirst < 2) then {player setDamage 1; hint "Du bist dehydriert.";}
+		if(life_thirst < 2) then {player setDamage 1; hint "You are dehydrated.";}
 		else
 		{
 			life_thirst = life_thirst - 10;
 			[] call life_fnc_hudUpdate;
-			if(life_thirst < 2) then {player setDamage 1; hint "Du bist wegen Dehydration gestorben.";};
+			if(life_thirst < 2) then {player setDamage 1; hint "You died because of dehydration.";};
 			switch(life_thirst) do 
 			{
-				case 30: {hint "Du hast eine Weile nichts getrunken, du solltest bald etwas trinken!";};
-				case 20: {hint "Du fängst an zu verdursten, du solltest etwas trinken oder du stirbst!"; player setFatigue 1;};
-				case 10: {hint "Du verdurstest nun, du wirst sehr bald sterben wenn du nicht schnell etwas trinkst!"; player setFatigue 1;};
+				case 30: {hint "You have not been drinking for a while, you should drink something soon!";};
+				case 20: {hint "You start to die of thirst, you should drink something or you die!"; player setFatigue 1;};
+				case 10: {hint "You are now dying of thirst, you're going to die very soon if you do not drink something soon!"; player setFatigue 1;};
 			};
 		};
 	};
@@ -79,7 +79,7 @@
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
-			hint "Du bist überladen, solange du nichts wegwirfst kannst du auch nicht rennen.";
+			hint "You are overweight, as long as you are carrying this much you can not even run.";
 		} else {
 			if(isForcedWalk player) then {
 				player forceWalk false;

@@ -14,7 +14,7 @@ _display = findDisplay 39400;
 if(isNull _display) exitWith {hint "Dialog not open!"; };
 
 ////Refresh boxes
-ctrlSetText [1000, format ["%1 Kisten", (missionNamespace getVariable "life_inv_box") ] ];
+ctrlSetText [1000, format ["%1 boxes", (missionNamespace getVariable "life_inv_box") ] ];
 
 ////////////////////////////////////////////////clear and fill listbox
 lbClear 1500;

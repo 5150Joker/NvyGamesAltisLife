@@ -29,9 +29,9 @@ if(life_blacklisted) exitWith
 //HOUSE RESPAWN
 [[player], "HOUSE_fnc_requestSpawnMenu", false, false] spawn life_fnc_MP;
 
-hint "Frage Datenbank an ...";
+hint "Question database ...";
 
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 
-hint "Spieler gespawnt!";
+hint "Players spawn!";
