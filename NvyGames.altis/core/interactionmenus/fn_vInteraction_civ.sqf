@@ -40,7 +40,7 @@ if(["adac"] call life_fnc_permLevel > 0) then
 {
 	if(life_uinv_adac_toolkit > 0) then
 	{
-		_bRepair ctrlSetTooltip "Reparieren (ADAC-Toolkit)";
+		_bRepair ctrlSetTooltip "Repair (ADAC-Toolkit)";
 		_bRepair buttonSetAction "closeDialog 0; [life_vInact_curTarget] spawn life_fnc_adacRepairTruck;";
 		_bRepair ctrlEnable true;
 	};
@@ -68,7 +68,7 @@ _bPutToGarage buttonSetAction "closeDialog 0; [life_vInact_curTarget] spawn life
 if(["adac"] call life_fnc_permLevel > 0) then
 {
 	_bPutToGarage ctrlEnable true;
-	_bPutToGarage ctrlSetTooltip "Abschleppen (ADAC)";
+	_bPutToGarage ctrlSetTooltip "Tow (ADAC)";
 	_bPutToGarage buttonSetAction "closeDialog 0; [] spawn life_fnc_adacImpound;";
 }
 else
@@ -79,7 +79,7 @@ else
 //ADAC Repaint 
 if(["adac"] call life_fnc_permLevel > 0) then
 {
-	_bRepaint ctrlSetTooltip "Umlackieren (ADAC)";
+	_bRepaint ctrlSetTooltip "Repainting (ADAC)";
 	_bRepaint buttonSetAction "closeDialog 0; [] spawn life_fnc_adacRepaintMenu;";
 }
 else

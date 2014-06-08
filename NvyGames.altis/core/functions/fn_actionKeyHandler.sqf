@@ -13,7 +13,7 @@ if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 //##89
 if(player getVariable ["restrained", false]) exitWith
 {
-	hint "Du bist gefesselt!";
+	hint "You're tied up!";
 };
 
 
@@ -62,14 +62,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 			}
 			else
 			{
-				hint "Es wird bereits ein Dialog angezeigt.";
+				hint "There is already a dialog.";
 			};
 		}
 		else
 		{
-			hint "Der andere Spieler muss gefesselt sein.";
+			hint "The other player must be tied up.";
 			sleep 3;
-			hint "Benutze die Shift+R, um den Spieler zu fesseln.";
+			hint "Use the Shift + R to captivate the player.";
 		};
 	}
 	else
@@ -85,14 +85,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then
 				}
 				else
 				{
-					hint "Es wird bereits ein Dialog angezeigt.";
+					hint "There is already a dialog.";
 				};
 			}
 			else
 			{
-				hint "Der andere Spieler muss gefesselt sein.";
+				hint "The other player must be tied up.";
 				sleep 3;
-				hint "Benutze die Shift+R, um den Spieler zu fesseln.";
+				hint "Use the Shift + R to captivate the player.";
 			};
 		};
 	};

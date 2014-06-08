@@ -21,12 +21,12 @@ if(isNull _cop) exitWith {};
 		if(!(player getVariable["restrained",FALSE])) exitWith {};
 		if(!([west,getPos player,30] call life_fnc_nearUnits) && (player getVariable["restrained",FALSE]) && vehicle player == player) exitWith {
 			player setVariable["restrained",FALSE,TRUE];
-			titleText["[AUTO] Du bist entfesselt.","PLAIN"];
+			titleText["[AUTO] You are unleashed.","PLAIN"];
 		};
 	};
 };
 
-titleText[format["Du wurdest von %1 gefesselt.",name _cop],"PLAIN"];
+titleText[format["You were chosen by %1 tied.",name _cop],"PLAIN"];
 				
 while {player getVariable "restrained"} do
 {
@@ -54,5 +54,5 @@ while {player getVariable "restrained"} do
 		
 if(alive player) then
 {
-	titleText["Du wurdest freigelassen. Drücke V, um dich zu befreien.","PLAIN"];
+	titleText["You have been released. Press V to free yourself.","PLAIN"];
 };

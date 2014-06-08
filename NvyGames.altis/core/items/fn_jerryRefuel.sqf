@@ -8,9 +8,9 @@
 private["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_previousState"];
 _vehicle = cursorTarget;
 life_interrupted = false;
-if(isNull _vehicle) exitWith {hint "Du musst zu dem Fahrzeug schauen das du auffüllen willst!"};
+if(isNull _vehicle) exitWith {hint "You have to look to the vehicle that you want to fill!"};
 if(!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
-if(player distance _vehicle > 7.5) exitWith {hint "Du musst näher am Fahrzeug sein!"};
+if(player distance _vehicle > 7.5) exitWith {hint "You have to be closer to the vehicle!"};
 
 if(!([false,"fuelF",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;
@@ -86,5 +86,5 @@ switch (true) do
 		};
 	};
 };
-titleText[format["Du hast den %1 aufgetankt.",_displayName],"PLAIN"];
+titleText[format["You have the %1 refueled.",_displayName],"PLAIN"];
 [true,"fuelE",1] call life_fnc_handleInv;

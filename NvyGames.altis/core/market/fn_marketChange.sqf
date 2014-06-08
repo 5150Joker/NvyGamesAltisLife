@@ -48,7 +48,7 @@ switch(true) do
 	};
 	case (_rand <= 36): //6% Drogenpreis erhöhen
 	{
-		[[0,"News: Interpol hat eine internationale Drogenbande ausgehoben!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: Interpol has discovered an international drug gang!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		//Erhöhe Marktpreis mit marketSell
 		["marijuana", [15,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
@@ -62,7 +62,7 @@ switch(true) do
 	};
 	case (_rand <= 44): //8% Ölpreis erhöhen
 	{
-		[[0,"News: Öltanker gesunken!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: Oil tanker!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		["oilp", [20,40] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
 		
@@ -70,7 +70,7 @@ switch(true) do
 	};
 	case (_rand <= 54): //10% Eisenpreis + zementpreis + glaspreis erhöhen
 	{
-		[[0,"News: China baut World-China-Center!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: China builds world-China Center!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		["cement", [20,40] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
 		["iron_r", [20,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
@@ -80,7 +80,7 @@ switch(true) do
 	};
 	case (_rand <= 60): //4% Goldpreis sinkt
 	{
-		[[0,"News: Anleger verlieren Vertrauen in Gold!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: Investors lose confidence in gold!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		["gold", [15,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
 		["goldr", [15,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
@@ -89,7 +89,7 @@ switch(true) do
 	};
 	case (_rand <= 68): //8% Kupfer/Silber erhöht sich
 	{
-		[[0,"News: Elektronikindustrie benötigt Edelmetalle!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: Electronics industry needs precious metals!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		["gold", [15,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
 		["goldr", [15,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
@@ -99,7 +99,7 @@ switch(true) do
 	};
 	case (_rand <= 74): //6% Goldpreis erhöht sich
 	{
-		[[0,"News: Anleger verlieren Vertrauen in Dollar!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: Investors lose confidence in dollar!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		["gold", [15,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
 		["goldr", [15,30] call life_fnc_randomRound, true] call life_fnc_marketBuy; 
@@ -108,7 +108,7 @@ switch(true) do
 	};
 	case (_rand <= 80): //6% Drogenpreis niedriger
 	{
-		[[0,"News: Neue synthetische Droge überschwemmt Drogenmarkt!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: New synthetic drug inundated drug market!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		//Erhöhe Marktpreis mit marketSell
 		["marijuana", [15,30] call life_fnc_randomRound, true] call life_fnc_marketSell; 
@@ -122,7 +122,7 @@ switch(true) do
 	};
 	case (_rand <= 90): //10% Schildkröten höher
 	{
-		[[0,"News: China entdeckt Schildkröten als neue Medizin! Tierschützer sind besorgt!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[[0,"News: China discovered turtles as a new medicine! Animal rights activists are concerned!"],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		
 		//Erhöhe Marktpreis mit marketSell
 		["turtle", [4,10] call life_fnc_randomRound, true] call life_fnc_marketBuy; 	

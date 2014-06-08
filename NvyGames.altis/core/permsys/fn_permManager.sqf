@@ -13,7 +13,7 @@ life_permmanager_list_refreshing = false;
 
 if(life_dynperm_checkout_running) exitWith
 {
-	hint "Es werden gerade PERMS geladen. Bitte ein wenig warten.";
+	hint "There are currently loaded PERMS. Please wait a little.";
 };
 
 private["_display","_index"];

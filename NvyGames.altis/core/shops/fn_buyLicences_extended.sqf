@@ -47,7 +47,7 @@ _listbox = _display displayCtrl 1500;
 	}
 	else
 	{
-		_listbox lbAdd format["%1 (Bereits bekannt)", _displayname];
+		_listbox lbAdd format["%1 (Already known)", _displayname];
 		_listbox lbSetData [(lbSize _listbox) - 1, ""];
 	};
 }

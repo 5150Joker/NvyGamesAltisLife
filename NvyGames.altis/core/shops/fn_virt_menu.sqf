@@ -33,7 +33,7 @@ if(count _shop_data >= 3) then
 	foreach _conditions;
 };
 
-if(!_condok) exitWith {hint "Du kannst hier nicht kaufen!"; };
+if(!_condok) exitWith {hint "You can not buy here!"; };
 
 
 createDialog "shops_menu";

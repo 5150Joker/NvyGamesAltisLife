@@ -8,7 +8,7 @@
 
 private ["_house_inv", "_house_current_exdata", "_setarr", "_house_name", "_inventory_str"];
 
-hint "Synchronisiere ...";
+hint "sync ...";
 
 //Set exdata for later use
 _house_current_exdata = missionNamespace getVariable "house_current_exdata";

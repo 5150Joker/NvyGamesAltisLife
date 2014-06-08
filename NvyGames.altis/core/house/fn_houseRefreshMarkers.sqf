@@ -7,7 +7,7 @@ private ["_house_names", "_marker_name", "_house_marker_position"];
 
 _house_names = missionNamespace getVariable "spawn_home_list";
 
-hint "Aktualisiere Hausmarkierungen ...";
+hint "Update house markers ...";
 
 {
 	//Only for default house scheme!!!
@@ -18,7 +18,7 @@ hint "Aktualisiere Hausmarkierungen ...";
 	
 	deleteMarkerLocal _marker_name; //crash?
 	createMarkerLocal [_marker_name, _house_marker_position];
-	_marker_name setMarkerTextLocal "Haus";
+	_marker_name setMarkerTextLocal "House";
 	_marker_name setMarkerShapeLocal "RECTANGLE";
 	_marker_name setMarkerColorLocal "ColorGreen";
 	_marker_name setMarkerSizeLocal [1,1];
@@ -26,4 +26,4 @@ hint "Aktualisiere Hausmarkierungen ...";
 }
 foreach (_house_names select 0) select 0;
 
-hint "Hausmarkierungen aktualisiert!";
+hint "House markers updated!";

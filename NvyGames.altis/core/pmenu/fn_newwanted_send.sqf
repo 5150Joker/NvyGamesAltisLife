@@ -8,14 +8,14 @@ private["_index","_name","_uid","_reason","_bounty"];
 
 if( (call life_coplevel) < 1) exitWith
 {
-	hint "Du bist kein Cop!";
+	hint "You're not a cop!";
 };
 
 _index = lbCurSel 2100;
 
 if(_index < 0) exitWith
 {
-	hint "Keine Person ausgewählt!";
+	hint "No person selected!";
 };
 
 _name = lbText [2100, _index];
@@ -26,7 +26,7 @@ _reason = ctrlText 1400;
 
 if(isNil("_reason") || _reason == "") exitWith
 {
-	hint "Kein Grund angegeben!";
+	hint "No reason specified!";
 };
 
 //Load bounty
@@ -34,7 +34,7 @@ _bounty = ctrlText 1401;
 
 if(! ([_bounty] call fnc_isnumber)) exitWith
 {
-	hint "Du musst eine Zahl eingeben.";
+	hint "You have to enter a number.";
 };
 
 _bounty = parseNumber _bounty; //requested number
@@ -42,11 +42,11 @@ _bounty = round _bounty;
 
 if(_bounty < 1) exitWith
 {
-	hint "Zu kleinen Betrag angegeben!";
+	hint "For small amount given!";
 };
 
 //Execute
-hint format["Der Spieler %1 wird nun wegen %2 gesucht.", _name, _reason];
+hint format["The player %1 is now due %2 sought.", _name, _reason];
 
 //Send DB
 [[_uid,_name,"",[_reason,_bounty]],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;

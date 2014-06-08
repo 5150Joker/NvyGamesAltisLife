@@ -8,7 +8,7 @@
 	Start the process and setup the players information on the server.
 */
 private["_packet"];
-cutText["Erstelle Spielerdatenbank auf Server...","BLACK FADED"];
+cutText["Create Player Database Server...","BLACK FADED"];
 0 cutFadeOut 9999999;
 _packet = [player,playerSide,life_cash,life_atmcash,getPlayerUID player];
 switch (playerSide) do

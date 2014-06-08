@@ -11,7 +11,7 @@ _house_data = call compile format["%1", _house_data]; //compile data
 //////////////////Parse data
 _exdata = _house_data call life_fnc_houseExtractData;
 
-if (count _exdata == 0) exitWith { hint "Konnte zugehoriges Haus nicht laden."; };
+if (count _exdata == 0) exitWith { hint "Could not load the associated house."; };
 
 //Set player variable house_current_exdata
 missionNameSpace setVariable ["house_current_exdata", _exdata];
@@ -34,7 +34,7 @@ _canview = _exdata call life_fnc_houseCanAccess; //replaced by life_fnc_houseCan
 
 if(!_canview) exitWith
 {
-	hint "Kein Zugriff!";
+	hint "No access!";
 	diag_log format [ "%1 tried to access to %2, not belonging to player", name player, [_exdata, "name"] call life_fnc_houseExtractDataVal];
 };
 
@@ -60,12 +60,12 @@ disableUserInput false;
 
 if(!_heal) then
 {
-	hint "Du wurdest unterbrochen und wurdest nicht geheilt. Du hast dich aber etwas erholt.";
+	hint "You have been interrupted and not been healed. You've but recovered somewhat.";
 	player setFatigue 0;
 }
 else
 {
-	hint "Du hast dich ausgeruht und bist etwas geheilt worden.";
+	hint "You've rested and you've been somewhat healed.";
 	player setFatigue 0;
 	
 	if(damage player > 0.2) then

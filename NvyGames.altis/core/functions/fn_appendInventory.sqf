@@ -25,4 +25,4 @@ hintSilent "Lade Inventar ...";
 }
 foreach life__inventory;
 
-hintSilent "Inventar geladen";
+hintSilent "Inventory loaded";

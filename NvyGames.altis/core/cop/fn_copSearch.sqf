@@ -113,7 +113,7 @@ if((count _invs) + (count _weapons) > 0) then
 	
 	_illegal = _illegal + _illegalpolice + _illegalwp;	
 	
-	[[0,format["%1 hat Items im Wert von $%2 dabei.",name _civ,[_illegal] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[0,format["%1 has items worth $%2 there.",name _civ,[_illegal] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	
 	
 	//Pay the cop 
@@ -122,14 +122,14 @@ if((count _invs) + (count _weapons) > 0) then
 }
 	else
 {
-	_inv = "Keine illegalen Items.";
+	_inv = "No illegal items.";
 };
 if(!alive _civ || player distance _civ > 5) exitWith {hint format["Couldn't search %1", name _civ]};
 //hint format["%1",_this];
-hint parseText format["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='#FFD700'><t size='1.5'><br/>Illegale Gegenstände</t></t><br/>%2<br/><br/><br/><br/><t color='#FF0000'>%3</t>"
-,name _civ,_inv,if(_robber) then {"Hat die Bank ausgeraubt"} else {""}];
+hint parseText format["<t color='#FF0000'><t size='2'>%1</t></t><br/><t color='#FFD700'><t size='1.5'><br/>Illegal items</t></t><br/>%2<br/><br/><br/><br/><t color='#FF0000'>%3</t>"
+,name _civ,_inv,if(_robber) then {"If the bank has been robbed"} else {""}];
 
 if(_robber) then
 {
-	[[0,format["%1 wurde als Bankräuber identifiziert!",name _civ]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format["%1 was identified as bank robber!",name _civ]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };

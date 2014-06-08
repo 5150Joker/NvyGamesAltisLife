@@ -45,13 +45,13 @@ if(_mine == "") exitWith
 {
 	if(!_silent) then
 	{
-		hint "Du bist nicht in der Nähe einer Mine!"
+		hint "You are not near a mine!"
 	};
 };
-if(vehicle player != player) exitWith {hint "Du kannst innerhalb von deinem Auto nicht abbauen!";};
+if(vehicle player != player) exitWith {hint "You can not break down within your car!";};
 
 _diff = [_mine,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(_diff == 0) exitWith {hint "Dein Inventar ist voll."};
+if(_diff == 0) exitWith {hint "Your inventory is full."};
 life_action_inUse = true;
 
 //player say3D "mining";
@@ -67,7 +67,7 @@ for "_i" from 0 to 2 do
 if(([true,_mine,_diff] call life_fnc_handleInv)) then
 {
 	_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format["Du hast %2 %1 abgebaut.",_itemName,_diff],"PLAIN"];
+	titleText[format["You %2 %1 mined.",_itemName,_diff],"PLAIN"];
 	
 	if(_endsound != "") then
 	{

@@ -18,12 +18,12 @@ _exdata = [_this,2,[]] call BIS_fnc_param;
 
 if(side player == west) exitWith
 {
-	hint "Du bist ein Cop!";
+	hint "You're a cop!";
 };
 
 if(_money <= 0) then
 {
-	hint "Ungultiger Geldbetrag.";
+	hint "Invalid amount of money.";
 };
 
 /////Mode HOUSE or NORMAL?
@@ -44,13 +44,13 @@ if(!_usehouse) then
 		[ [player, _query], "LAUNDER_fnc_launderMoney" ,false, false] call life_fnc_MP;
 		[1,false] call life_fnc_sessionHandle;
 		
-		hint "Geld wurde abgegeben. Der Geldwascher behalt einen Teil als Lohn!";
+		hint "Money was delivered. The money washer retains a portion as a reward!";
 		sleep 3;
-		hint format["Es wird in ca. %1 Minuten auf dein Konto überwiesen", 3 * 5];
+		hint format["It is in about. %1 Been credited to your account minutes", 3 * 5];
 	}
 	else
 	{
-		hint "Konnte Geld nicht aus Inventar nehmen.";
+		hint "Could not take money out of inventory.";
 	};
 }
 else

@@ -18,20 +18,20 @@ _gangs = _dialog displayCtrl 2521;
 	{
 		if((_gang select 2)) then
 		{
-			_locked = "Gesperrt";
+			_locked = "Closed";
 		}
 			else
 		{
-			_locked = "Offen";
+			_locked = "Opened";
 		};
 		
-		_gangs lbAdd format["%1 [Mitglieder: %2] - %3",_gang select 0,count (units(_gang select 1)),_locked];
+		_gangs lbAdd format["%1 [Members: %2] - %3",_gang select 0,count (units(_gang select 1)),_locked];
 		_gangs lbSetData [(lbSize _gangs)-1,_gang select 0];
 	};
 } foreach (life_gang_list);
 
 if(((lbSize _gangs)-1) == -1) then
 {
-	_gangs lbAdd "Keine Gangs.";
+	_gangs lbAdd "No gangs.";
 	ctrlShow[2522,false];
 };

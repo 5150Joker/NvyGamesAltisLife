@@ -16,7 +16,7 @@ _name = [_exdata, "name"] call life_fnc_houseExtractDataVal;
 
 
 //
-hint "Parke Fahrzeuge in der Nähe ...";
+hint "Park nearby vehicles ...";
 sleep 1;
 
 //Call vehicle store

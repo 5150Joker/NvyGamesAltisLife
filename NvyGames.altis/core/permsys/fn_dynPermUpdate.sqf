@@ -49,7 +49,7 @@ _cleanedplayerperms = [];
 	}
 	else
 	{
-		systemChat format[">PERM< Die Gruppe %1 existiert nicht mehr! Du warst Rang %2!", _x select 0, _x select 1];
+		systemChat format[">PERM< The group %1no longer exists! You were rank %2!", _x select 0, _x select 1];
 	};
 }
 foreach life_player_perms;

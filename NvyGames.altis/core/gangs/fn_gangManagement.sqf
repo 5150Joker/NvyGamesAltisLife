@@ -76,7 +76,7 @@ for "_i" from 0 to (count _units)-1 do
 		
 		case ((getPlayerUID (_units select _i)) == _ownerID) :
 		{
-			_members lbAdd format["%1 [Gründer]", name (_units select _i)];
+			_members lbAdd format["%1 [Founder]", name (_units select _i)];
 		};
 		
 		default 

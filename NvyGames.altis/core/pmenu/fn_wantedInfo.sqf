@@ -30,4 +30,4 @@ _bounty = _data select 3;
 	};
 } foreach _crimes;
 
-ctrlSetText[2403,format["Momentanes Kopfgeld: $%1",[_bounty] call life_fnc_numberText]];
+ctrlSetText[2403,format["Monetary bounty: $%1",[_bounty] call life_fnc_numberText]];

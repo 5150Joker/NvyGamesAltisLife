@@ -22,7 +22,7 @@ _oldlevel = [_permid] call life_fnc_permLevel; //get old level of player
 
 if(life_dynperm_checkout_running) then
 {
-	systemChat "Du bekommst einen Perm gesetzt, der gerade nicht geladen ist. Bitte warten.";
+	systemChat "You get a perm set, which is just not loaded. Please wait.";
 };
 
 waitUntil { !life_dynperm_checkout_running; };
@@ -52,7 +52,7 @@ Perm found?
 */
 if(_perm_max_level == -1 || _perm_name == "INVALID") exitWith
 {
-	[[0,format[">PERM< Spieler %1 wollte auf nicht vorhandenes Perm %2 zugreifen! BITTE ADMIN MELDEN!", name player, _permid]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format[">PERM< Player %1 wanted on non-existent Perm %2 you! PLEASE REGISTER ADMIN!", name player, _permid]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
 
 
@@ -83,7 +83,7 @@ switch(true) do
 
 if(!_valid) exitWith
 {
-	[[0,format[">PERM< Konnte Perm für Spieler %1 der Gruppe '%2' nicht auf %3 setzen!", name player, _perm_name, _level]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format[">PERM< Could Perm for players %1 the group '%2' not on %3 set!", name player, _perm_name, _level]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
 
 
@@ -121,7 +121,7 @@ foreach _perm_perm;
 
 if(!_valid) exitWith
 {
-	[[0,format[">PERM< Spieler %1 hat keine Erlaubnis für '%2'!", name player, _perm_name]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format[">PERM< player %1 has no permission for '%2'!", name player, _perm_name]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
 
 /*
@@ -153,29 +153,29 @@ switch(true) do
 	case (_oldlevel == _level) : {};
 	case (_level == 0):
 	{
-		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Herausgeworfen!</t><br/><t size='1'>Du bist nun kein Mitglied der Gruppe mehr!</t>", _perm_logo,_perm_name];
+		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Thrown out!</t><br/><t size='1'>You are now a member of the group more!</t>", _perm_logo,_perm_name];
 		hint parseText _message;
 	};
 	case (_oldlevel == 0):
 	{
-		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>Du wurdest in die Gruppe aufgenommen!</t>", _perm_logo,_perm_name, _level];
+		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>You have been added to the group!</t>", _perm_logo,_perm_name, _level];
 		hint parseText _message;
 	};
 	case (_level > _oldlevel):
 	{
-		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>Du hast einen höheren Rang bekommen!</t>", _perm_logo,_perm_name, _level];
+		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>You get a higher rank!</t>", _perm_logo,_perm_name, _level];
 		hint parseText _message;
 	};
 	case (_level < _oldlevel):
 	{
-		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>Dein Rang wurde herabgestuft!</t>", _perm_logo,_perm_name, _level];
+		_message = format["<img size='10' color='#FFFFFF' image='%1'/><br/><br/><t size='2.5'>%2</t><br/><t size='1.5'>Level %3</t><br/><t size='1'>Your rank was downgraded!</t>", _perm_logo,_perm_name, _level];
 		hint parseText _message;
 	};
 };
 
 if(_adminmode) then
 {
-	[[0,format["!!!ADMIN: >PERM< %2 von %1 wurde auf %3 gesetzt!", name player, _perm_name, _level]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+	[[0,format["!!!ADMIN: >PERM< %2 of %1 was on %3 set!", name player, _perm_name, _level]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 };
 
 //Sync

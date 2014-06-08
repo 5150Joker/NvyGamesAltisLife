@@ -9,7 +9,7 @@ class admin_pw
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Authentifizierung notwendig</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Authentication required</t>"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
@@ -54,7 +54,7 @@ class admin_pw
 		class RscStructuredText_1101: RscStructuredText
 		{
 			idc = 1101;
-			text = "Bitte Admin-Passwort eingeben, um dich zu authorisieren!"; //--- ToDo: Localize;
+			text = "Please enter the admin password to authorize you!"; //--- ToDo: Localize;
 			x = 11.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 5.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 18 * GUI_GRID_W;
@@ -68,7 +68,7 @@ class admin_pw
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "Close"; //--- ToDo: Localize;
 			x = 11 * GUI_GRID_W + GUI_GRID_X;
 			y = 20 * GUI_GRID_H + GUI_GRID_Y;
 			w = 19 * GUI_GRID_W;
@@ -92,7 +92,7 @@ class admin_pw
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4.5 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Authentifizieren"; //--- ToDo: Localize;
+			tooltip = "Authenticate"; //--- ToDo: Localize;
 			onButtonClick="[] spawn life_fnc_adminAuthentificate;";
 		};
 	};

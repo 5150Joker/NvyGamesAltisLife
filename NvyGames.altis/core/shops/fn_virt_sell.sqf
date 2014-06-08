@@ -27,9 +27,9 @@ if(_marketprice != -1) then
 ///////////
 
 _amount = ctrlText 2405;
-if(!([_amount] call fnc_isnumber)) exitWith {hint "Du hast keine aktuelle Anzahl angegeben.";};
+if(!([_amount] call fnc_isnumber)) exitWith {hint "You've given no current number.";};
 _amount = parseNumber (_amount);
-if(_amount > (missionNameSpace getVariable _var)) exitWith {hint "Du hast nicht so viele Items zum Verkauf!"};
+if(_amount > (missionNameSpace getVariable _var)) exitWith {hint "You do not have as many items for sale!"};
 
 _price = (_price * _amount);
 _name = [_var] call life_fnc_vartostr;
@@ -38,12 +38,12 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 
 	if(_type in life_illegal_item_shortnames) then
 	{
-		hint format["Du verkaufst %1 %2 für $%3. Du musst das Geld erst waschen lassen, um es benutzen zu können.",_amount,_name,[_price] call life_fnc_numberText];
+		hint format["you are selling %1 %2 for $%3. You have to let wash only the money to use it can.",_amount,_name,[_price] call life_fnc_numberText];
 		[true,"illegalmoney",_price] call life_fnc_handleInv;
 	}
 	else
 	{
-		hint format["Du verkaufst %1 %2 für $%3",_amount,_name,[_price] call life_fnc_numberText];
+		hint format["you are selling %1 %2 for $%3",_amount,_name,[_price] call life_fnc_numberText];
 		life_cash = life_cash + _price;		
 	};
 	

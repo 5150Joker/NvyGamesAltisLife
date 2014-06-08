@@ -10,7 +10,7 @@
 _fnc_scriptName = "Player Synchronization";
 private["_exit"];
 if(isNil "life_session_time") then {life_session_time = false;};
-if(life_session_time) exitWith {hint "Du hast bereits die Synchronisationsoption genutzt, du kannst diese nur aller 5 Minuten benutzen.";};
+if(life_session_time) exitWith {hint "You have already used the synchronization option, you can only use them every 5 minutes.";};
 
 switch (typeName life_fnc_MP_packet) do
 {
@@ -25,10 +25,10 @@ switch (typeName life_fnc_MP_packet) do
 	default {_exit = true;};
 };
 
-if(!isNil "_exit") exitWith {hint "Weil einige Cheater das BIS MP Framework manipulieren, haben sie dich dabei gestoppt Atlis Life zu genießen.\n\nDu kannst es in einer Minute nochmal versuchen, falls du denkst es ist ein Fehler.";};
+if(!isNil "_exit") exitWith {hint "Because some cheaters manipulate the BIS MP framework, they have stopped you while enjoying Atlis Life.\n\nYou can do it in a minute, try again, if you think it is a mistake.";};
 
 [] call life_fnc_sessionUpdate;
-hint "Synchronisiere Spielerdaten.\n\nBitte warte 20 Sekunden bevor du die Verbindung trennst.";
+hint "Synchronize player data.\n\nPlease wait for 20 seconds before you separate the connection.";
 [] spawn
 {
 	life_session_time = true;

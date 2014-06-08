@@ -16,7 +16,7 @@ _list = _display displayCtrl 2401;
 lbClear _list;
 _units = [];
 
-ctrlSetText[2404,"Stelle Verbindung her..."];
+ctrlSetText[2404,"Put forth connection..."];
 
 if((__GETC__(life_coplevel) < 2 && __GETC__(life_adminlevel) == 0) || playerSide == civilian) then
 {

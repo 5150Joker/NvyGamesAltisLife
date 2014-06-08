@@ -10,7 +10,7 @@ _arr = _data select 0;
 
 if(count _arr <= 1) exitWith
 {
-	hint "Daten konnten nicht analysiert werden.";
+	hint "Data could not be analyzed.";
 	[];
 };
 
@@ -31,7 +31,7 @@ _inventory = call compile format["%1", _inventory]; //compile to string
 
 
 //Check with NIL
-if(isNil "_inventory") then { _inventory = []; hint "Inventar konnte nicht geladen werden."; sleep 2;}; //Pech gehabt!
+if(isNil "_inventory") then { _inventory = []; hint "Inventory could not be loaded."; sleep 2;}; //Pech gehabt!
 
 diag_log format ["0 Done compiling string %1 to array %2", (_arr select 7), _inventory ];
 
@@ -60,7 +60,7 @@ _safe_upgrade = (_arr select 13) == "True" || (_arr select 13) == "1";
 
 _safe_inventory = [(_arr select 14), 1, -1] call BIS_fnc_trimString;
 _safe_inventory = call compile format["%1", _safe_inventory]; //compile to string
-if(isNil "_safe_inventory") then { _safe_inventory = []; hint "Safe konnte nicht geladen werden."; sleep 2;}; //Pech gehabt!
+if(isNil "_safe_inventory") then { _safe_inventory = []; hint "Safe could not be loaded."; sleep 2;}; //Pech gehabt!
 
 
 ///Trusted Persons

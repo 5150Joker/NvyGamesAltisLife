@@ -23,7 +23,7 @@ _housename = [_exdata, "name"] call life_fnc_houseExtractDataVal;
 life_action_inUse = true;
 
 //Call database
-hint "Frage Datenbank an ...";
+hint "Question to database ...";
 
 //call command
 [ [player ,_housename] , "HOUSE_fnc_DBresetKeys" ,false, false] call life_fnc_MP;

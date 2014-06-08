@@ -33,7 +33,7 @@ switch(_pole) do
 	case 3: {_canown = (life_event_pole3_owner != "");};
 };
 
-if(!_canown) exitWith { hint "Die Flagge wird gerade eingenommen!";};
+if(!_canown) exitWith { hint "The flag is being taken!";};
 
 //check if timeout
 switch(_pole) do 
@@ -43,10 +43,10 @@ switch(_pole) do
 	case 3: {_canown = (time >= life_event_pole3_timeoutuntil);};
 };
 
-if(!_canown) exitWith { hint "Cooldown der Flagge ist noch nicht abgelaufen!";};
+if(!_canown) exitWith { hint "Cool Down the flag has not expired!";};
 
 //own the pole 
- [[0,format["** EVENT ** %1 nimmt gerade eine Flagge ein!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+ [[0,format["** EVENT ** %1 just takes a flag!", name player]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 
  switch(_pole) do 
 {
@@ -82,11 +82,11 @@ for "_i" from 0 to 360 do
 	
 	if(_distance > 20) exitWith
 	{
-		hint "Du bist zu weit weg! Abgebrochen!";
+		hint "You're too far away! Canceled!";
 	}
 	else
 	{
-		hintSilent format["Distanz zur Flagge: %1m", round _distance];
+		hintSilent format["Distance to the flag: %1m", round _distance];
 	};
 	
 	//check if tazed => cancel
@@ -101,12 +101,12 @@ switch(true) do
 {
 	case (_tazed):
 	{
-		hint "Du wurdest getazert und hast keine Punkte bekommen!";
+		hint "Du wurdest tazed und hast keine Punkte bekommen!";
 		_cooldown = 10;
 	};
 	case (_time_at_pole < 120):
 	{
-		hint "Keine Punkte bekommen!";
+		hint "You get no points!";
 		_cooldown = 10;
 	};
 	case (_time_at_pole < 240):

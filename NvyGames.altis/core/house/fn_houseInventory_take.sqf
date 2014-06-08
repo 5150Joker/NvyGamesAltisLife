@@ -14,19 +14,19 @@ _count = ctrlText 3505;
 
 if( _selectedindex == -1) exitWith
 {
-	hint "Nichts ausgewählt.";
+	hint "Nothing selected.";
 };
 if(! ([_count] call fnc_isnumber)) exitWith
 {
-	hint "Du musst eine Zahl eingeben.";
+	hint "You have to enter a number.";
 };
 if( _selectedindex == -1) exitWith
 {
-	hint "Nichts ausgewählt.";
+	hint "None Selected.";
 };
 if(life_house_current_inv_running) exitWith
 {
-	hint "Inventar aktualisiert gerade.";
+	hint "Inventory just updated.";
 };
 
 
@@ -35,8 +35,8 @@ _item_count = lbValue [3502, _selectedindex]; //how many items are existing in P
 
 _count = parseNumber _count;
 _count = round _count;
-if( _count < 0) exitWith { hint "Ungültige Zahl."; };
-if(_count > _item_count) exitWith {hint "Zu hohe Zahl eingegeben.";};
+if( _count < 0) exitWith { hint "Invalid number."; };
+if(_count > _item_count) exitWith {hint "Excessive number entered.";};
 
 
 //Take item from HOUSE and put it into PINV IF NOT MONEY
@@ -55,7 +55,7 @@ else
 	}
 	else
 	{
-		hint "Konnte Item nicht ins Inventar legen!";
+		hint "Could not put item into the inventory!";
 	};
 };
 
@@ -75,10 +75,10 @@ if(_took_success) then
 	
 	if(!_done) then
 	{
-		hint "Datenfehler! Bitte einem Admin melden!";
+		hint "Data error! Please report to an admin!";
 		life_house_current_inv = []; //empty it for security reasons
 		sleep 3;
-		hint "Inventar aus Sicherheitsgründen geleert!";
+		hint "Inventory emptied for safety reasons!";
 	};
 };
 

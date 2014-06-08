@@ -12,7 +12,7 @@ if(_holster && life_n_holstered) exitWith {systemChat "Holster: Status match!";}
 
 if(_holster) then
 {
-	systemChat "Du packst deine Waffen weg.";
+	systemChat "You pack away your weapons.";
 
 	//Call holster save fnc
 	[] call life_fnc_holsterSaveGear;
@@ -33,14 +33,14 @@ if(_holster) then
 	//Set final vars
 	life_n_holstered = true;
 	
-	hintSilent "Deine Items sind nicht weg! Shift+H benutzen, um sie wieder herauszuholen!";
+	hintSilent "Your Items are not going away! Shift + H to use to get them out again!";
 }
 else
 {
 	if(isNil("life_n_holster_data")) exitWith {};
 	if( count life_n_holster_data < 1) exitWith {}; 
 	
-	systemChat "Du packst deine Waffen wieder aus.";
+	systemChat "You pack up your weapons again.";
 	life_n_holstered = false;
 	
 	[] call life_fnc_holsterLoadGear;

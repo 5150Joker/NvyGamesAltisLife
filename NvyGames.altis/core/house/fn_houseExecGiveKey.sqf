@@ -12,4 +12,4 @@ _house_data = _this select 2;
 
 life_action_inUse = false;
 
-hint format["Der Spieler %1 kann nun auf dein Haus zugreifen.", _house_args select 0];
+hint format["The player %1 can now access your home.", _house_args select 0];

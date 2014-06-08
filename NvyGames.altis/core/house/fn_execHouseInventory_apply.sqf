@@ -14,5 +14,5 @@ _house_data = _this select 2;
 life_action_inUse = false; //done
 life_house_current_inv_running = false;
 
-hint "Items synchronisiert."
+hint "Items synchronized."
 

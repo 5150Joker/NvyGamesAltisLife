@@ -19,14 +19,14 @@ switch(true) do
 	case (_value > 0):
 	{
 		[true,"uitem_event_score",_value] call life_fnc_handleInv;
-		hintSilent format["Du hast %1 Punkte bekommen!", _value];
+		hintSilent format["You get %1 points!", _value];
 	};
 	case (_value < 0):
 	{
 		[false,"uitem_event_score",-_value] call life_fnc_handleInv;
-		hintSilent format["Du hast %1 Punkte verloren!", -_value];
+		hintSilent format["You lost %1 points!", -_value];
 	};
 };
 
 sleep 2;
-hintSilent format["Punktestand: %1", [life_uinv_event_score] call life_fnc_numberText];
+hintSilent format["Score: %1", [life_uinv_event_score] call life_fnc_numberText];

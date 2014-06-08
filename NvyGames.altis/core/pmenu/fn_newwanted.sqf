@@ -6,7 +6,7 @@
 
 if( (call life_coplevel) < 1) exitWith
 {
-	hint "Du bist kein Cop!";
+	hint "You're not a cop!";
 };
 
 private["_display","_list","_name","_crimes","_bounty","_units"];

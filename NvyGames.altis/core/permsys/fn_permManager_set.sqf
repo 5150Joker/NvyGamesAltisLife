@@ -23,7 +23,7 @@ foreach playableUnits;
 
 if(typeName _destination == "STRING") exitWith
 {
-	hint "Ungültiger Spieler!";
+	hint "Invalid player!";
 };
 
 
@@ -58,7 +58,7 @@ if(_level == -1) then
 //check 
 if( _level < 0 || _level > (_perm_row select 2)) exitWith
 {
-	hint "Ungültiges Level angegeben!";
+	hint "Invalid level specified!";
 };
 
 //get admin level 
@@ -82,4 +82,4 @@ else
 life_permmanager_player_perms = []; //Reset cache to make update possible
 [] call life_fnc_permManager_update; //update, because sth was changed!
 
-hint format["Level fur %1 der Gruppe %2 auf %3 gesetzt.", name _destination, _perm_row select 1, _level];
+hint format["Level for %1 the group %2 on %3 set.", name _destination, _perm_row select 1, _level];

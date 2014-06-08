@@ -12,7 +12,7 @@ private["_session", "_isbanned", "_coplevel", "_perm_coplevel"];
 _session = _this;
 diag_log format["CLIENT: %1 :: %2", typeName _session,_session];
 life_session_tries = life_session_tries + 1;
-if(life_session_tries > 3) exitWith {cutText["Verbindung zum Server kann nicht hergestellt werden. Du hast die maximale Anzahl von 3 Versuchen erreicht. Verbinde bitte neu!","BLACK FADED"];0 cutFadeOut 9999999;};
+if(life_session_tries > 3) exitWith {cutText["Connection to the server can not be established. You've reached the maximum number of 3 tries. Please reconnect!","BLACK FADED"];0 cutFadeOut 9999999;};
 cutText["Erhalte Informationen von Server...","BLACK FADED"];
 0 cutFadeOut 9999999;
 
@@ -129,8 +129,8 @@ if(_isbanned) exitWith
 	life__inventory = [];
 	civ_gear = [];
 	cop_gear = [];
-	[[0,format["DBBAN >>> Gebannter Spieler '%1' wollte joinen <<<", name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;
-	cutText["Du wurdest von diesem Server gebannt! Bei Beschwerden TS: 62.104.20.197:10023","BLACK FADED"];0 cutFadeOut 9999999;
+	[[0,format["DBBAN >>> Banned player '%1' and cannot. <<<", name player]],"life_fnc_broadcast" /*,west,FALSE*/] call life_fnc_MP;
+	cutText["You have been banned from this server! In case of complaints www.nvygames.com","BLACK FADED"];0 cutFadeOut 9999999;
 };
 
 switch(__GETC__(life_donator)) do
@@ -142,7 +142,7 @@ switch(__GETC__(life_donator)) do
 
 if(isNil("life__inventory")) then
 {
-	hint "Inventar war leer!";
+	hint "Inventory was empty!";
 	sleep 2;
 	life__inventory = [];
 };
@@ -153,6 +153,6 @@ if(isNil("life__inventory")) then
 [true] call life_fnc_dynPermCheckout;
 
 if((getPlayerUID player) != (_session select 0)) exitWith {[] spawn life_fnc_sessionCreate;}; //Since it didn't match create the session again?
-cutText["Erhalte Informationen von Server und prüfe sie, du bist fast fertig.","BLACK FADED"];
+cutText["Receive information from the server and test them, you're almost done.","BLACK FADED"];
 0 cutFadeOut 9999999;
 life_session_completed = true;

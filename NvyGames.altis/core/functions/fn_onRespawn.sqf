@@ -40,7 +40,7 @@ switch(playerSide) do
 
 if(life_is_arrested) then
 {
-	hint "Du hast versucht im Gefängnis ein Suizid zu begehen, du wirst nun eine längere Zeit hinter Gittern bleiben müssen.";
+	hint "You tried to commit suicide in prison, you will now have a longer period of time must remain behind bars.";
 	life_is_arrested = false;
 	[_unit,true] spawn life_fnc_jail;
 }
@@ -52,12 +52,12 @@ if(life_is_arrested) then
 	//HOUSE RESPAWN
 	[[player], "HOUSE_fnc_requestSpawnMenu", false, false] spawn life_fnc_MP;
 	
-	hint "Frage Datenbank an ...";
+	hint "Question database ...";
 	
 	waitUntil{!isNull (findDisplay 38500)}; //ADDED: HOUSE_RESPAWN
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 	
-	hint "Spieler gespawnt!";
+	hint "Players spawn!";
 };
 
 _unit addRating 100000;

@@ -17,14 +17,14 @@ sleep 45;
 
 if(_funds > life_atmcash) then
 {
-	hint "Weil die Staatsbank ausgeraubt wurde hast du einen Teil deines Geldes verloren.\n\nDas nächste mal solltest du dir eine Kontenversicherung kaufen!";
+	hint "Because the State Bank was robbed you've lost a part of your money.\n\nNext time you should buy an insurance accounts!";
 	life_atmcash = 0;
 }
 	else
 {
 	if(life_has_insurance) then
 	{
-		hint "Der letzte Überfall auf die Staatsbank hat die Zivilisten dort getroffen wo's am meisten weh tut, glücklicherweiße hast du eine Kontenversicherung und hast keinen müden Penny verloren!\n\nDu solltest bald wieder einen Bankautomaten aufsuchen um die Versicherung zu erneuern!";
+		hint "The last attack on the State Bank has hit the civilians where it hurts the most, fortunately you have a bank insurance accounts and do not have a lost a penny!\n\nYou should go to an ATM machine to renew the insurance!";
 		life_has_insurance = false;
 	}
 		else

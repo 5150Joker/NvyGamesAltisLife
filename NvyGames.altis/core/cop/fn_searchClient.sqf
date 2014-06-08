@@ -46,7 +46,7 @@ if(life_n_holstered) then
 	missionNamespace setVariable[_var,0];
 } foreach life_police_only_items_bounty;
 
-if(_licenses == "") then {_licenses = "Keine Lizenzen und Fähigkeiten<br/>"};
+if(_licenses == "") then {_licenses = "No licenses and skills<br/>"};
 
 
 
@@ -80,7 +80,7 @@ if(_handgun in life_illegalweapons) then
 foreach weapons player;
 
 {
-	systemChat format["Waffe entfernt: %1", _x];
+	systemChat format["Weapon away: %1", _x];
 	player removeWeapon _x; 
 }
 foreach _weapons;

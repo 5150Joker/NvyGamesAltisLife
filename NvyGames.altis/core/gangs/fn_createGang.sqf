@@ -9,10 +9,10 @@ private["_value","_len","_group"];
 _value = ctrlText 2522;
 _len = [_value] call KRON_StrLen;
 
-if(_len > 25) exitWith {hint "Der Name ist zu lang. Er darf maximal 25 Zeichen lang sein."};
-if(life_cash < 10000) exitWith {hint "Du hast nicht die nötigen $10000!"};
+if(_len > 25) exitWith {hint "The name is too long. It may be up to 25 characters long."};
+if(life_cash < 10000) exitWith {hint "You do not have the necessary $10,000!"};
 if(isNil {life_gang_list}) exitWith {hint "Server not authorized for feature."};
-if(([_value,life_gang_list] call fnc_index) != -1) exitWith {hint "Es gibt bereits eine Gang mit diesem Namen!"};
+if(([_value,life_gang_list] call fnc_index) != -1) exitWith {hint "There is already a gang with this name!"};
 
 _group = createGroup civilian;
 

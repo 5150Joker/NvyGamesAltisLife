@@ -14,7 +14,7 @@ _sel = lbCurSel _gangs;
 _data = _gangs lbData _sel;
 
 _index = [_data,life_gang_list] call fnc_index;
-if(_index == -1) exitWith {hint "Konnte Gang nicht finden."};
+if(_index == -1) exitWith {hint "Could not find gear."};
 _gang = life_gang_list select _index;
 _group = _gang select 1;
 _locked = _gang select 2;
@@ -25,13 +25,13 @@ if(!isNull _group) then
 	{
 		[player] join _group;
 		life_my_gang = _group;
-		hint format["Du bist der Gang beigetreten: %1",_gang select 0];
+		hint format["You are not a member of the transition: %1",_gang select 0];
 		
 		closeDialog 0;
 	}
 		else
 	{
-		hint "Diese Gang ist im Augenblick gesperrt. Du kannst nicht beitreten.";
+		hint "This gang is locked at the moment. You can not join.";
 	};
 }
 	else

@@ -11,15 +11,15 @@ _count = ctrlText 3506;
 
 if( _selectedindex == -1) exitWith
 {
-	hint "Nichts ausgewählt.";
+	hint "None Selected.";
 };
 if(! ([_count] call fnc_isnumber)) exitWith
 {
-	hint "Du musst eine Zahl eingeben.";
+	hint "You have to enter a number.";
 };
 if(life_house_current_inv_running) exitWith
 {
-	hint "Inventar aktualisiert gerade.";
+	hint "Inventory just updated.";
 };
 
 _count = parseNumber _count; //requested number
@@ -35,13 +35,13 @@ if(_item == "money") then //Security check: update _item_count
 };
 
 //Check count
-if( _count < 0) exitWith { hint "Ungültige Zahl."; };
-if(_count > _item_count) exitWith {hint "Zu hohe Zahl eingegeben.";};
+if( _count < 0) exitWith { hint "Invalid number."; };
+if(_count > _item_count) exitWith {hint "Number entered is too high of a number.";};
 
 //Check weight
 if (life_house_current_weight + (_count * ([_item] call life_fnc_itemWeight)) > life_house_current_maxweight) exitWith
 {
-	hint "Das Haus kann nicht mehr aufnehmen!";
+	hint "The house is full!!";
 };
 
 _took_success = false; //because of shit script language
@@ -59,7 +59,7 @@ else
 	}
 	else
 	{
-		hint "Konnte Item nicht aus Inventar nehmen!";
+		hint "Could not take item from inventory!";
 	};
 };
 
