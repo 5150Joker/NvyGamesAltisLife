@@ -10,7 +10,7 @@ class perm_dlg
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Gruppenverwaltung</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>group Administration</t>"; //--- ToDo: Localize;
 			x = 4 * GUI_GRID_W + GUI_GRID_X;
 			y = 1 * GUI_GRID_H + GUI_GRID_Y;
 			w = 32 * GUI_GRID_W;
@@ -81,13 +81,13 @@ class perm_dlg
 			y = 1 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Startet Gruppenverwaltung mit Adminrechten"; //--- ToDo: Localize;
+			tooltip = "Starts Group Management with Admin rights"; //--- ToDo: Localize;
 			onButtonClick = "if((call life_adminlevel) > 0) then { life_permmanager_admin = true; [] call life_fnc_permManager_update; hint ""Adminmodus aktiviert."";};";
 		};
 		class bClose: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 4 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 32 * GUI_GRID_W;

@@ -142,7 +142,7 @@ class marketView
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 5 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 30 * GUI_GRID_W;
