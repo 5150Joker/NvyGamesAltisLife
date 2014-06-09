@@ -10,7 +10,7 @@ class perm_dlg_new
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t size='1.2' align='center'>Gruppenverwaltung</t>"; //--- ToDo: Localize;
+			text = "<t size='1.2' align='center'>Group Administration</t>"; //--- ToDo: Localize;
 			x = 1 * GUI_GRID_W + GUI_GRID_X;
 			y = 1 * GUI_GRID_H + GUI_GRID_Y;
 			w = 38 * GUI_GRID_W;
@@ -85,7 +85,7 @@ class perm_dlg_new
 		class bClose: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 1 * GUI_GRID_W + GUI_GRID_X;
 			y = 23 * GUI_GRID_H + GUI_GRID_Y;
 			w = 38 * GUI_GRID_W;

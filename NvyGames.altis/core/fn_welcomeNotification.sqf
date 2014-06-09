@@ -23,7 +23,7 @@
 	"Mit Fahrzeugen interagieren"
 ];*/
 
-"" hintC parseText "<t><t size='1.5'>Welcome to Nvy Games Altis Life Server!</t><br/><t color='#EE0000'>Important:</t><br/><t>Setze Custom action 10 will be used to complete core actions in game. Set it to a key of your choice. By default it is left win key.</t></br><t>You can find the setting on</t><t color='#00FF00'>
+"" hintC parseText "<t><t size='1.5'>Welcome to Nvy Games Altis Life Server!</t><br/><t color='#EE0000'>Important:</t><br/><t>Set Custom action 10 will be used to complete core actions in game. Set it to a key of your choice. By default it is left win key.</t></br><t>You can find the setting on</t><t color='#00FF00'>
 Configuration - Control Panel - Indiv. Control Panel - Action button 10</t></t>";
 
 

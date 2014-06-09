@@ -17,7 +17,7 @@ class packItem
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Einpacken</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>Pack</t>"; //--- ToDo: Localize;
 			x = 8 * GUI_GRID_W + GUI_GRID_X;
 			y = 3 * GUI_GRID_H + GUI_GRID_Y;
 			w = 24 * GUI_GRID_W;
@@ -35,7 +35,7 @@ class packItem
 		class RscStructuredText_1101: RscStructuredText
 		{
 			idc = 1101;
-			text = "Du kannst einige Waffen und<br/>Ausrüstungsgegenstände in Kisten einpacken.<br/><br/>Diese eingepacken Gegenstände kannst du sicher in deinem Auto, Haus oder Inventar verstauen.<br/><br/><t color='#00FF00'>Du kannst einen Gegenstand auspacken, wenn du ihn im Inventar benutzt.</t><br/><t size='0.7'>Hinweis: Es werden nur Items gezeigt, die du einpacken kannst!</t>"; //--- ToDo: Localize;
+			text = "You can find several weapons and<br/>Pack equipment into boxes.<br/><br/>This is you can pack items safely away in your car, home or inventory.<br/><br/><t color='#00FF00'>You can unpack an object when you use it in your inventory.</t><br/><t size='0.7'>Note: Showing only items that you can pack up!</t>"; //--- ToDo: Localize;
 			x = 8.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 4.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 11 * GUI_GRID_W;
@@ -59,7 +59,7 @@ class packItem
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 8 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 24 * GUI_GRID_W;
@@ -77,7 +77,7 @@ class packItem
 		class bPack: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Einpacken"; //--- ToDo: Localize;
+			text = "Pack"; //--- ToDo: Localize;
 			x = 20 * GUI_GRID_W + GUI_GRID_X;
 			y = 19 * GUI_GRID_H + GUI_GRID_Y;
 			w = 11.5 * GUI_GRID_W;
