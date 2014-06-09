@@ -28,7 +28,7 @@ class life_extended_admin_menu {
 		class RscText_1000: Life_RscText
 		{
 			idc = -1;
-			text = "Erweiterte Admintools"; //--- ToDo: Localize;
+			text = "Admin Tools"; //--- ToDo: Localize;
 			x = 2 * GUI_GRID_W + GUI_GRID_X;
 			y = 1 * GUI_GRID_H + GUI_GRID_Y;
 			w = 37 * GUI_GRID_W;
@@ -90,7 +90,7 @@ class life_extended_admin_menu {
 		class bClose: Life_RscButtonMenu
 	    {
 	    	idc = -1;
-	    	text = "Schließen"; //--- ToDo: Localize;
+	    	text = "Close"; //--- ToDo: Localize;
 	    	x = 2 * GUI_GRID_W + GUI_GRID_X;
 	    	y = 23 * GUI_GRID_H + GUI_GRID_Y;
 	    	w = 37 * GUI_GRID_W;
@@ -168,10 +168,21 @@ class life_extended_admin_menu {
 			colorText[] = {1,0,0,1};
 			onButtonClick = "[] spawn life_fnc_adminBan;";
 		};
+		class player_b_MapTp: Life_RscButtonMenu
+		{
+			idc = 2406;
+			text = "Map Tp"; //--- ToDo: Localize;
+			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 15 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 1 * GUI_GRID_H;
+			colorText[] = {1,0,0,1};
+			onButtonClick = "[] spawn life_fnc_adminMapTp;";
+		};
 	    class tool_b_god_off: Life_RscButtonMenu
 		{
 			idc = 2407;
-			text = "Aus"; //--- ToDo: Localize;
+			text = "Off"; //--- ToDo: Localize;
 			x = 2.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 9 * GUI_GRID_H + GUI_GRID_Y;
 			w = 3.5 * GUI_GRID_W;
@@ -182,7 +193,7 @@ class life_extended_admin_menu {
 		class tool_b_god_on: Life_RscButtonMenu
 		{
 			idc = 2408;
-			text = "An"; //--- ToDo: Localize;
+			text = "On"; //--- ToDo: Localize;
 			x = 6 * GUI_GRID_W + GUI_GRID_X;
 			y = 9 * GUI_GRID_H + GUI_GRID_Y;
 			w = 3 * GUI_GRID_W;
@@ -201,7 +212,7 @@ class life_extended_admin_menu {
 		class veh_b_spawn: Life_RscButtonMenu
 		{
 			idc = 2409;
-			text = "Fahrzeug spawnen"; //--- ToDo: Localize;
+			text = "Spawn Vehicle"; //--- ToDo: Localize;
 			x = 10.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.5 * GUI_GRID_W;
@@ -216,7 +227,7 @@ class life_extended_admin_menu {
 			y = 13 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Herporten"; //--- ToDo: Localize;
+			tooltip = "Teleport Player Here"; //--- ToDo: Localize;
 			onButtonClick = "[] spawn life_fnc_adminTpHere;";
 		};
 		class player_b_tpTo: Life_RscButtonMenu
@@ -227,18 +238,18 @@ class life_extended_admin_menu {
 			y = 13 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Zum Spieler hinporten"; //--- ToDo: Localize;
+			tooltip = "Teleport to Player"; //--- ToDo: Localize;
 			onButtonClick = "[] spawn life_fnc_adminTpTo;";
 		};
 		class player_b_restrain: Life_RscButtonMenu
 		{
 			idc = 2412;
-			text = "Restrain"; //--- ToDo: Localize;
+			text = "Restr."; //--- ToDo: Localize;
 			x = 30.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Fesseln"; //--- ToDo: Localize;
+			tooltip = "Restrain Player"; //--- ToDo: Localize;
 			onButtonClick = "[] spawn life_fnc_adminRestrain;";
 		};
 		class player_b_unrestrain: Life_RscButtonMenu
@@ -249,7 +260,7 @@ class life_extended_admin_menu {
 			y = 14 * GUI_GRID_H + GUI_GRID_Y;
 			w = 4 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			tooltip = "Entfesseln"; //--- ToDo: Localize;
+			tooltip = "Unrestrain Player"; //--- ToDo: Localize;
 			onButtonClick = "[] spawn life_fnc_adminUnrestrain;";
 		};
 		class tool_b_health: RscButtonMenu
@@ -285,7 +296,7 @@ class life_extended_admin_menu {
 		class tool_b_marketreset: RscButtonMenu
 		{
 			idc = -1;
-			text = "Marktpreise Reset"; //--- ToDo: Localize;
+			text = "Market Price Reset"; //--- ToDo: Localize;
 			x = 2.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 15 * GUI_GRID_H + GUI_GRID_Y;
 			w = 6.5 * GUI_GRID_W;
