@@ -36,6 +36,7 @@ class Life_Client_Core
 		
 		class adminTpTo {};
 		class adminTpHere {};
+		class adminMapTp {};
 		
 		class adminRestrain {};
 		class adminUnrestrain {};
