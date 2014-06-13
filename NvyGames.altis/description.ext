@@ -1,6 +1,6 @@
 author = "TAW_Tonic";
-onLoadName = "Black Lagoon Altis Life";
-onLoadMission = "Black Lagoon Altis Life";
+onLoadName = "Nvy Games Altis Life";
+onLoadMission = "Nvy Games Altis Life";
 joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 10;
@@ -341,3 +341,5 @@ class CfgNotifications
 		priority = 5;
 	};
 };
+
+onPauseScript = "core\player_onPause.sqf";

@@ -22,7 +22,7 @@ switch (playerSide) do
 };
 
 //Action key link BUGGY //HACKFIX working?
-life_actions = life_actions + [player addAction["Aktion ...",life_fnc_actionKeyHandler,"",0,false,true]];
+life_actions = life_actions + [player addAction["Action ...",life_fnc_actionKeyHandler,"",0,false,true]];
 
 life_actions = life_actions + [player addAction["<t color='#0000FF'>ADAC</t>",life_fnc_serviceTruck,"",99,false,false,"",' (["adac"] call life_fnc_permLevel) > 0 && (typeOf (vehicle player) == "C_Offroad_01_F") && ((vehicle player animationPhase "HideServices") == 0) && ((vehicle player) in life_vehicles) && (speed vehicle player) < 1 ']];
 

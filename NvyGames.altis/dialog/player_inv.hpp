@@ -313,7 +313,7 @@ class playerSettings {
 		
 		class ButtonPack : Life_RscButtonMenu {
 			idc = -1;
-			text = "EINPACKEN ...";
+			text = "Pack Up";
 			onButtonClick = "[] spawn life_fnc_vitem_openPackDialog;";
 			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
@@ -335,7 +335,7 @@ class playerSettings {
 		
 		class ButtonPerms : Life_RscButtonMenu {
 			idc = -1;
-			text = "Gruppen";
+			text = "Groups";
 			onButtonClick = "[] spawn life_fnc_permManager";
 			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;

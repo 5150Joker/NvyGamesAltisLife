@@ -10,7 +10,7 @@ class license_extended_dlg
 		class RscStructuredText_1100: RscStructuredText
 		{
 			idc = 1100;
-			text = "<t align='center' size='1.2'>Lizenzen und Fähigkeiten</t>"; //--- ToDo: Localize;
+			text = "<t align='center' size='1.2'>]licenses</t>"; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 4 * GUI_GRID_H + GUI_GRID_Y;
 			w = 21 * GUI_GRID_W;
@@ -32,7 +32,7 @@ class license_extended_dlg
 		class b_Close: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 10 * GUI_GRID_W + GUI_GRID_X;
 			y = 18 * GUI_GRID_H + GUI_GRID_Y;
 			w = 21 * GUI_GRID_W;
@@ -50,7 +50,7 @@ class license_extended_dlg
 		class b_buy: RscButtonMenu
 		{
 			idc = 2401;
-			text = "Kaufen"; //--- ToDo: Localize;
+			text = "buy"; //--- ToDo: Localize;
 			x = 21 * GUI_GRID_W + GUI_GRID_X;
 			y = 16.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 9.5 * GUI_GRID_W;

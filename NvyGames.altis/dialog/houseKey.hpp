@@ -57,7 +57,7 @@ class house_keyDialog
 		class bClose: RscButtonMenu
 		{
 			idc = 2400;
-			text = "Schliessen"; //--- ToDo: Localize;
+			text = "close"; //--- ToDo: Localize;
 			x = 12 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 16 * GUI_GRID_W;

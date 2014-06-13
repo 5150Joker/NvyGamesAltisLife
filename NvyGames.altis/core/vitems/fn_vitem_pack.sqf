@@ -51,7 +51,7 @@ if(_shortname == "") exitWith
 
 life_action_inUse = true;
 
-hintSilent "Pack a ...";
+hintSilent "Packing...";
 sleep 2;
 
 /////////////////

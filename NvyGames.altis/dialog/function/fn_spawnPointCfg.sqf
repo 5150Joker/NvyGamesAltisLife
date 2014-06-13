@@ -71,7 +71,7 @@ switch (_side) do
 	
 };
 
-_spawns = _spawns + [ ["all_schiessplatz", "Schießplatz", "icons\schiessplatz.paa" ] ];
+_spawns = _spawns + [ ["all_schiessplatz", "Deathmatch", "icons\schiessplatz.paa" ] ];
 
 
 _spawns;
