@@ -91,6 +91,7 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
+		class robStoreAction {};
 		
 		//#2
 		class putToGarage {};
@@ -253,6 +254,7 @@ class Life_Client_Core
 		class showQuickHelp {};
 		
 		class dbbanExec {};
+		class handleFlashbang {};
 	};
 	
 	class Network
