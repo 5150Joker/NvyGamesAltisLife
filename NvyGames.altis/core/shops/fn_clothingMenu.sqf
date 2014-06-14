@@ -6,7 +6,7 @@
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
 */
-private["_list","_clothes","_pic","_filter"];
+private["_list","_clothes","_pic","_filter","_uniform"];
 createDialog "Life_Clothing";
 disableSerialization;
 
@@ -164,3 +164,7 @@ if((life_clothing_purchase select 4) == -1) then
 };
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
+sleep 10;
+exitWith{
+	[[],"life_fnc_updateClothing",false] call life_fnc_MP;
+};
