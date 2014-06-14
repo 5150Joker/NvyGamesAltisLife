@@ -62,3 +62,5 @@ if(!StartProgress) then
 };
 StartProgress = true;
 
+0 = execVM "IgiLoad\IgiLoadInit.sqf";
+
