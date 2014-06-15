@@ -5,40 +5,41 @@
 	Description:
 	Does whatever it needs to when a player dies.
 */
+removeAllWeapons _unit;
+removeAllContainers _unit;
 private["_unit","_killer","_weapons","_handle"];
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _source = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if(isNull _unit) exitWith {};
 
-cutText["Waiting to respawn to....","BLACK FADED"];
+cutText["Waiting to respawn....","BLACK FADED"];
 0 cutFadeOut 9999999;
+player setVariable["life_civRestrained",false,true];
 
-if(playerSide == civilian) then
-{
-	removeAllContainers _unit;
-};
 
 hideBody _unit;
 //Make my killer wanted!
 if(side _source != west && alive _source) then
 {
 	//##66 if is in rebel area => not wanted
-	if(_source distance (getMarkerPos "area_rebellen_1") < (2000 / 2)) exitWith
+	if(_source distance (getMarkerPos "area_rebellen_1") < (2000 / 2)) then
 	{
 		systemChat "You have been killed in rebel territory. The police keeps out of there!";
-	};
-
-
-	if(vehicle _source isKindOf "LandVehicle") then
-	{
-		if(alive _source) then
-		{
-			[[getPlayerUID _source,name _source,"187V"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		};
 	}
-		else
+	else
 	{
-		[[getPlayerUID _source,name _source,"187"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+
+		if(vehicle _source isKindOf "LandVehicle") then
+		{
+			if(alive _source) then
+			{
+				[[getPlayerUID _source,name _source,"187V"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+			};
+		}
+			else
+		{
+			[[getPlayerUID _source,name _source,"187"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+		};
 	};
 };
 
@@ -46,7 +47,7 @@ if(side _source == west && !life_use_atm) then
 {
 	if(life_cash != 0) then
 	{
-		[format["$%1 the State Bank were returned because the bank robber was killed.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[format["$%1 stolen from the bank was returned because the bank robber was killed.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 		life_cash = 0;
 	};
 };
@@ -69,11 +70,10 @@ if(side _source == west && vehicle _source == _source && playerSide == civilian)
 }
 	else
 {
-	//##85
-	/*if(playerSide == civilian) then
+	if(playerSide == civilian && !isNull _source && side _source == west) then
 	{
 		[[getPlayerUID _unit],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
-	};*/
+	};
 };
 
 _handle = [_unit] spawn life_fnc_dropItems;

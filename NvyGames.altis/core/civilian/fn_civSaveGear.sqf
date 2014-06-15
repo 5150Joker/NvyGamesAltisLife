@@ -70,20 +70,11 @@ if(life_n_holstered) then
 {
 	//Translate holster gear to civ gear
 	//_primary,_handgun,_magazines,_uniform,_vest,_backpack,_items,_primitems,_secitems,_handgunitems,_uitems,_vitems,_bitems,_launcher
-	_primary = life_n_holster_data select 0;
-	_handgun = life_n_holster_data select 1;
-	_magazines = life_n_holster_data select 2;
-	_uniform = life_n_holster_data select 3;
-	_vest = life_n_holster_data select 4;
-	_backpack = life_n_holster_data select 5;
-	_items = life_n_holster_data select 6;
-	_primitems = life_n_holster_data select 7;
-	_secitems = life_n_holster_data select 8;
-	_handgunItems = life_n_holster_data select 9;
-	_uitems = life_n_holster_data select 10;
-	_vitems = life_n_holster_data select 11;
-	_bItems = life_n_holster_data select 12;
-	_launcher = life_n_holster_data select 13;
+	_primary = A_weapon
+	_handgun = B_weapon
+	_magazines = A_mags +B_mags
+	_primitems = A_weaponAttach
+	_handgunItems = B_weaponAttach
 };
 
 civ_gear = [_uniform,_backpack,_goggles,_headgear,_items,_uitems,_bItems,_vest,_primary,_launcher,_handgun,_magazines,_primitems,_secitems,_handgunItems,_vitems];
